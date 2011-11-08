@@ -3,16 +3,19 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "Ticketmaster::Provider::Rally::Project" do
 
   before(:all) do 
-    @project_name = "Sample Project"
-    @project_id = 2712835688
-    @project_created_at = "Tue Jan 18 15:40:28 UTC 2011"
+    @ticketmaster = TicketMaster.new(:rally, {:url => 'https://community.rallydev.com/slm', 
+                                     :username => 'ticketmaster-rally@simeonfosterwillbanks.com', 
+                                     :password => 'Password'})
+    @klass = TicketMaster::Provider::Rally::Project
+
   end
 
   before(:each) do
-    @ticketmaster = TicketMaster.new(:rally, {:url => 'https://community.rallydev.com/slm', 
-                                              :username => 'ticketmaster-rally@simeonfosterwillbanks.com', 
-                                              :password => 'Password'})
-    @klass = TicketMaster::Provider::Rally::Project
+    @project_name = "Sample Project"
+    @project_id = 2712835688
+    @project_created_at = "Tue Jan 18 15:40:28 UTC 2011"
+    TicketMaster::Provider::Rally.rally.should_receive(:find_all).and_return([:project])
+
   end
 
   it "should be able to load all projects" do
@@ -45,7 +48,7 @@ describe "Ticketmaster::Provider::Rally::Project" do
     projects.first.id.should == @project_id    
     projects.first.created_at.utc.strftime('%a %b %d %H:%M:%S UTC %Y').should == @project_created_at
   end
-  
+
   it "should be able to load projects using the find method" do
     @ticketmaster.project.should == @klass
     @ticketmaster.project.find(@project_id).should be_an_instance_of(@klass)

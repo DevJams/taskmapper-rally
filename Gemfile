@@ -14,6 +14,7 @@ group :development do
   gem "yard", "~> 0.7.0"
   gem "bundler", "~> 1.0.0"
   gem "jeweler", "~> 1.5.2"
+  gem "machinist", "~> 1.0.6"
   gem "rcov", ">= 0"
   gem 'ruby-debug', :platform => [:ruby_18]
   gem 'ruby-debug19', :platform => [:ruby_19]
