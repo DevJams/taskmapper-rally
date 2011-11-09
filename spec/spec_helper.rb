@@ -4,6 +4,9 @@ require 'rubygems'
 require 'ticketmaster'
 require 'ticketmaster-rally'
 require 'rspec'
+require 'machinist'
+require 'sham'
+require 'faker'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
