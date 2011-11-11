@@ -26,11 +26,13 @@ describe "Ticketmaster::Provider::Rally::Project" do
   end
 
   it "should be able to find a project by id" do
-    VCR.use_cassette('rally_projects') { project = @ticketmaster.project(@project_id) }
-    project.should be_an_instance_of(@klass)
-    project.name.should == @project_name
-    project.id.should == @project_id
-    project.created_at.utc.strftime('%a %b %d %H:%M:%S UTC %Y').should == @project_created_at
+    VCR.use_cassette('rally_by_id') do 
+      @project = @ticketmaster.project(@project_id) 
+    end
+    @project.should be_an_instance_of(@klass)
+    @project.name.should == @project_name
+    @project.id.should == @project_id
+    @project.created_at.utc.strftime('%a %b %d %H:%M:%S UTC %Y').should == @project_created_at
   end
 
   it "should be able to load all projects from an array of ids" do 
