@@ -1,0 +1,184 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
+    body: 
+    headers: 
+      x-rallyintegrationname: 
+      - RubyRestAPI
+      x-rallyintegrationlibrary: 
+      - RallyRestAPI version 1.0.3
+      x-rallyintegrationplatform: 
+      - Ruby 1.9.2
+      x-rallyintegrationos: 
+      - i686-linux
+      authorization: 
+      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
+      content-type: 
+      - text/xml
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Fri, 11 Nov 2011 02:40:44 GMT
+      server: 
+      - Jetty(6.1.26)
+      expires: 
+      - Thu, 01-Jan-1970 00:00:00 GMT
+      rallyrequestid: 
+      - qd-app-02-trial1v2j3cwuxcyo71j11lq77ucqzy.qd-app-02-trial27737
+      content-type: 
+      - text/xml;  charset=utf-8
+      set-cookie: 
+      - JSESSIONID=qd-app-02-trial1v2j3cwuxcyo71j11lq77ucqzy.qd-app-02-trial;Path=/slm;Secure
+      vary: 
+      - Accept-Encoding
+      p3p: 
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+      cache-control: 
+      - no-cache, private,max-age=0,must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: |+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <QueryResult rallyAPIMajor="1" rallyAPIMinor="17">
+        <Errors />
+        <Warnings />
+        <TotalResultCount>1</TotalResultCount>
+        <StartIndex>1</StartIndex>
+        <PageSize>20</PageSize>
+        <Results>
+          <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688" objectVersion="1" refObjectName="Sample Project" CreatedAt="Jan 18" type="Project">
+            <CreationDate>2011-01-18T15:40:28.807Z</CreationDate>
+            <ObjectID>2712835688</ObjectID>
+            <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
+            <Workspace rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspace/2712835610" refObjectName="Workspace 1" type="Workspace" />
+            <BuildDefinitions>
+              <BuildDefinition rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/builddefinition/2712835693" refObjectName="Default Build Definition" type="BuildDefinition" />
+            </BuildDefinitions>
+            <Children />
+            <Description />
+            <Iterations>
+              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836040" refObjectName="1 - Browse and Book" type="Iteration" />
+              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836046" refObjectName="3 - After Safari" type="Iteration" />
+              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836043" refObjectName="2 - Streamline Operations" type="Iteration" />
+            </Iterations>
+            <Name>Sample Project</Name>
+            <Notes />
+            <Owner>sfw@simeonfosterwillbanks.com</Owner>
+            <Releases />
+            <State>Open</State>
+            <Users />
+          </Object>
+        </Results>
+      </QueryResult>
+      
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Artifact?query=(ObjectID%20=%202780205298)&fetch=true&project=https://community.rallydev.com/slm/webservice/1.17/project/2712835688
+    body: 
+    headers: 
+      x-rallyintegrationname: 
+      - RubyRestAPI
+      x-rallyintegrationlibrary: 
+      - RallyRestAPI version 1.0.3
+      x-rallyintegrationplatform: 
+      - Ruby 1.9.2
+      x-rallyintegrationos: 
+      - i686-linux
+      authorization: 
+      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
+      content-type: 
+      - text/xml
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Fri, 11 Nov 2011 02:40:45 GMT
+      server: 
+      - Jetty(6.1.26)
+      expires: 
+      - Thu, 01-Jan-1970 00:00:00 GMT
+      rallyrequestid: 
+      - qd-app-02-trial8z1hin9nrht61jaxoyzcy12tl.qd-app-02-trial27751
+      content-type: 
+      - text/xml;  charset=utf-8
+      set-cookie: 
+      - JSESSIONID=qd-app-02-trial8z1hin9nrht61jaxoyzcy12tl.qd-app-02-trial;Path=/slm;Secure
+      vary: 
+      - Accept-Encoding
+      p3p: 
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+      cache-control: 
+      - no-cache, private,max-age=0,must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: |+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <QueryResult rallyAPIMajor="1" rallyAPIMinor="17">
+        <Errors />
+        <Warnings />
+        <TotalResultCount>1</TotalResultCount>
+        <StartIndex>1</StartIndex>
+        <PageSize>20</PageSize>
+        <Results>
+          <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/2780205298" objectVersion="98" refObjectName="Safari email alert has wrong subject" CreatedAt="Jan 29" type="Defect">
+            <CreationDate>2011-01-29T19:35:56.668Z</CreationDate>
+            <ObjectID>2780205298</ObjectID>
+            <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
+            <Workspace rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspace/2712835610" refObjectName="Workspace 1" type="Workspace" />
+            <Description>The safari email alert message is 'Safari Email.' It should be 'Awesome Safari Email.'</Description>
+            <Discussion>
+              <ConversationPost rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2990260871" type="ConversationPost" />
+              <ConversationPost rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2988718166" type="ConversationPost" />
+              <ConversationPost rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2990260903" type="ConversationPost" />
+              <ConversationPost rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2988719307" type="ConversationPost" />
+            </Discussion>
+            <FormattedID>DE1</FormattedID>
+            <LastUpdateDate>2011-11-08T21:31:17.166Z</LastUpdateDate>
+            <Name>Safari email alert has wrong subject</Name>
+            <Notes />
+            <Project rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688" refObjectName="Sample Project" type="Project" />
+            <RevisionHistory rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/revisionhistory/2780205299" type="RevisionHistory" />
+            <Tags />
+            <AffectsDoc>false</AffectsDoc>
+            <Attachments />
+            <Blocked>false</Blocked>
+            <Duplicates />
+            <Environment>None</Environment>
+            <Priority>None</Priority>
+            <Rank>549999999999.999</Rank>
+            <ReleaseNote>false</ReleaseNote>
+            <Resolution>None</Resolution>
+            <ScheduleState>Defined</ScheduleState>
+            <Severity>None</Severity>
+            <State>Submitted</State>
+            <SubmittedBy>sfw@simeonfosterwillbanks.com</SubmittedBy>
+            <TaskActualTotal>0.0</TaskActualTotal>
+            <TaskEstimateTotal>0.0</TaskEstimateTotal>
+            <TaskRemainingTotal>0.0</TaskRemainingTotal>
+            <Tasks>
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/4694941632" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/2904309530" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/2990261501" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/2967182543" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/2967373101" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/2967188369" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/2904308027" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/3833668871" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/3831685531" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/3833150966" refObjectName="TaskTesting" type="Task" />
+              <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/3582864714" refObjectName="TaskTesting" type="Task" />
+            </Tasks>
+          </Object>
+        </Results>
+      </QueryResult>
+      
+    http_version: "1.1"
