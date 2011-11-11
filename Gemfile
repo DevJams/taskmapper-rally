@@ -14,7 +14,7 @@ group :development do
   gem "yard", "~> 0.7.0"
   gem "bundler", "~> 1.0.0"
   gem "jeweler", "~> 1.5.2"
-  gem "fakeweb"
+  gem "fakeweb", "~> 1.3.0"
   gem "vcr", "~> 1.11.3" 
   gem "rcov", ">= 0"
   gem 'ruby-debug', :platform => [:ruby_18]

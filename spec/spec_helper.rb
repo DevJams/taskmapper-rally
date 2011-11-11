@@ -5,12 +5,8 @@ require 'ticketmaster'
 require 'ticketmaster-rally'
 require 'rspec'
 require 'vcr'
+require 'vcr_setup'
 
-VCR.config do |c|
-  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  c.stub_with :webmock
-  c.default_cassette_options = { :record => :once }
-end
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.

@@ -3,9 +3,11 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "Ticketmaster::Provider::Rally::Project" do
 
   before(:all) do 
-    @ticketmaster = TicketMaster.new(:rally, {:url => 'https://community.rallydev.com/slm', 
-                                     :username => 'ticketmaster-rally@simeonfosterwillbanks.com', 
-                                     :password => 'Password'})
+    VCR.use_cassette('rally') do 
+      @ticketmaster = TicketMaster.new(:rally, {:url => 'https://community.rallydev.com/slm', 
+                                       :username => 'ticketmaster-rally@simeonfosterwillbanks.com', 
+                                       :password => 'Password'})
+    end
     @klass = TicketMaster::Provider::Rally::Project
   end
 
@@ -13,16 +15,18 @@ describe "Ticketmaster::Provider::Rally::Project" do
     @project_name = "Sample Project"
     @project_id = 2712835688
     @project_created_at = "Tue Jan 18 15:40:28 UTC 2011"
-#    TicketMaster::Provider::Rally.rally.should_receive(:find_all).and_return([RallyProject.make])
+    #    TicketMaster::Provider::Rally.rally.should_receive(:find_all).and_return([RallyProject.make])
   end
 
   it "should be able to load all projects" do
-    @ticketmaster.projects.should be_an_instance_of(Array)
-    @ticketmaster.projects.first.should be_an_instance_of(@klass)
+    VCR.use_cassette('rally_projects') do 
+      @ticketmaster.projects.should be_an_instance_of(Array)
+      @ticketmaster.projects.first.should be_an_instance_of(@klass)
+    end
   end
 
   it "should be able to find a project by id" do
-    project = @ticketmaster.project(@project_id)
+    VCR.use_cassette('rally_projects') { project = @ticketmaster.project(@project_id) }
     project.should be_an_instance_of(@klass)
     project.name.should == @project_name
     project.id.should == @project_id
