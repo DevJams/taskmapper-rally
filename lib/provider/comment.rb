@@ -57,7 +57,7 @@ module TicketMaster::Provider
         project = self.rally_project(project_id)
         # Rally Ruby REST API expects IDs as strings
         # For id.to_s see note on Project::id
-        query_result = TicketMaster::Provider::Rally.rally.find(:conversation_post, :fetch => true, :project => project) { equal :object_i_d, id.to_s }
+        query_result = TicketMaster::Provider::Rally.rally.find(:conversation_post, :fetch => false, :project => project) { equal :object_i_d, id.to_s }
         self.new query_result.first, project_id
       end
 
