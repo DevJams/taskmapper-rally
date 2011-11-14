@@ -15,7 +15,6 @@ describe "Ticketmaster::Provider::Rally::Project" do
     @project_name = "Sample Project"
     @project_id = 2712835688
     @project_created_at = "Tue Jan 18 15:40:28 UTC 2011"
-    #    TicketMaster::Provider::Rally.rally.should_receive(:find_all).and_return([RallyProject.make])
   end
 
   it "should be able to load all projects" do
