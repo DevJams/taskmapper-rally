@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ticketmaster-rally}
-  s.version = "0.1.2"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Simeon F. Willbanks", "Rob Kaufman", "Rafael George"]
-  s.date = %q{2011-08-02}
+  s.authors = [%q{Simeon F. Willbanks}, %q{Rob Kaufman}, %q{Rafael George}]
+  s.date = %q{2011-11-14}
   s.description = %q{This is a provider for ticketmaster. It provides interoperability with Rally and it's project planning system through the ticketmaster gem}
-  s.email = ["sfw@simeonfosterwillbanks.com", "rob@notch8.com", "george.rafael@gmail.com"]
+  s.email = [%q{sfw@simeonfosterwillbanks.com}, %q{rob@notch8.com}, %q{george.rafael@gmail.com}]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -26,6 +26,32 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
+    "fixtures/vcr_cassettes/all_tickets.yml",
+    "fixtures/vcr_cassettes/create_comment.yml",
+    "fixtures/vcr_cassettes/create_ticket.yml",
+    "fixtures/vcr_cassettes/load_all_rally_comments.yml",
+    "fixtures/vcr_cassettes/load_comments_by_attributes.yml",
+    "fixtures/vcr_cassettes/load_comments_by_ids.yml",
+    "fixtures/vcr_cassettes/rally.yml",
+    "fixtures/vcr_cassettes/rally_by_id.yml",
+    "fixtures/vcr_cassettes/rally_project_return_class.yml",
+    "fixtures/vcr_cassettes/rally_projects.yml",
+    "fixtures/vcr_cassettes/rally_projects_by_attributes.yml",
+    "fixtures/vcr_cassettes/rally_projects_by_ids.yml",
+    "fixtures/vcr_cassettes/rally_tickets.yml",
+    "fixtures/vcr_cassettes/retrieve_ticket.yml",
+    "fixtures/vcr_cassettes/save_task_ticket.yml",
+    "fixtures/vcr_cassettes/save_ticket.yml",
+    "fixtures/vcr_cassettes/ticket_by_attributes.yml",
+    "fixtures/vcr_cassettes/ticket_save.yml",
+    "fixtures/vcr_cassettes/ticket_update.yml",
+    "fixtures/vcr_cassettes/ticketmaster_call.yml",
+    "fixtures/vcr_cassettes/ticketmaster_setting.yml",
+    "fixtures/vcr_cassettes/tickets_by_attributes.yml",
+    "fixtures/vcr_cassettes/tickets_by_defect.yml",
+    "fixtures/vcr_cassettes/tickets_by_hierachial.yml",
+    "fixtures/vcr_cassettes/tickets_by_ids.yml",
+    "fixtures/vcr_cassettes/tickets_by_task.yml",
     "lib/provider/comment.rb",
     "lib/provider/project.rb",
     "lib/provider/rally.rb",
@@ -38,19 +64,21 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb",
     "spec/ticketmaster-rally_spec.rb",
     "spec/tickets_spec.rb",
+    "spec/vcr_setup.rb",
     "ticketmaster-rally.gemspec"
   ]
   s.homepage = %q{http://github.com/simeonwillbanks/ticketmaster-rally}
-  s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.1}
+  s.licenses = [%q{MIT}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.6}
   s.summary = %q{Ticketmaster provider for Rally's Ruby REST API}
   s.test_files = [
     "spec/comments_spec.rb",
     "spec/projects_spec.rb",
     "spec/spec_helper.rb",
     "spec/ticketmaster-rally_spec.rb",
-    "spec/tickets_spec.rb"
+    "spec/tickets_spec.rb",
+    "spec/vcr_setup.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -63,6 +91,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<yard>, ["~> 0.7.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_development_dependency(%q<fakeweb>, ["~> 1.3.0"])
+      s.add_development_dependency(%q<vcr>, ["~> 1.11.3"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<ruby-debug>, [">= 0"])
       s.add_development_dependency(%q<ruby-debug19>, [">= 0"])
@@ -73,6 +103,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<yard>, ["~> 0.7.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_dependency(%q<fakeweb>, ["~> 1.3.0"])
+      s.add_dependency(%q<vcr>, ["~> 1.11.3"])
       s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<ruby-debug>, [">= 0"])
       s.add_dependency(%q<ruby-debug19>, [">= 0"])
@@ -84,6 +116,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<yard>, ["~> 0.7.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+    s.add_dependency(%q<fakeweb>, ["~> 1.3.0"])
+    s.add_dependency(%q<vcr>, ["~> 1.11.3"])
     s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<ruby-debug>, [">= 0"])
     s.add_dependency(%q<ruby-debug19>, [">= 0"])
