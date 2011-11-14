@@ -1,3 +1,0 @@
-RallyProject.blueprint do 
-
-end
