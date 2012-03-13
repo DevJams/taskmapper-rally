@@ -16,7 +16,6 @@ group :development do
   gem "jeweler", "~> 1.5.2"
   gem "fakeweb", "~> 1.3.0"
   gem "vcr", "~> 1.11.3" 
-  gem "rcov", ">= 0"
   gem 'ruby-debug', :platform => [:ruby_18]
   gem 'ruby-debug19', :platform => [:ruby_19]
 end
