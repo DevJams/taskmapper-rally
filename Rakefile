@@ -12,11 +12,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "ticketmaster-rally"
-  gem.homepage = "http://github.com/simeonwillbanks/ticketmaster-rally"
+  gem.name = "taskmapper-rally"
+  gem.homepage = "http://github.com/simeonwillbanks/taskmapper-rally"
   gem.license = "MIT"
-  gem.summary = %Q{Ticketmaster provider for Rally's Ruby REST API}
-  gem.description = %Q{This is a provider for ticketmaster. It provides interoperability with Rally and it's project planning system through the ticketmaster gem}
+  gem.summary = %Q{taskmapper provider for Rally's Ruby REST API}
+  gem.description = %Q{This is a provider for taskmapper. It provides interoperability with Rally and it's project planning system through the taskmapper gem}
   gem.email = ["sfw@simeonfosterwillbanks.com", "rob@notch8.com", "george.rafael@gmail.com"]
   gem.authors = ["Simeon F. Willbanks", "Rob Kaufman", "Rafael George"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

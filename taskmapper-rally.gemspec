@@ -4,13 +4,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "ticketmaster-rally"
+  s.name = "taskmapper-rally"
   s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Simeon F. Willbanks", "Rob Kaufman", "Rafael George"]
   s.date = "2012-05-14"
-  s.description = "This is a provider for ticketmaster. It provides interoperability with Rally and it's project planning system through the ticketmaster gem"
+  s.description = "This is a provider for taskmapper. It provides interoperability with Rally and it's project planning system through the taskmapper gem"
   s.email = ["sfw@simeonfosterwillbanks.com", "rob@notch8.com", "george.rafael@gmail.com"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -59,8 +59,8 @@ Gem::Specification.new do |s|
     "spec/fixtures/vcr_cassettes/ticket_by_attributes.yml",
     "spec/fixtures/vcr_cassettes/ticket_save.yml",
     "spec/fixtures/vcr_cassettes/ticket_update.yml",
-    "spec/fixtures/vcr_cassettes/ticketmaster_call.yml",
-    "spec/fixtures/vcr_cassettes/ticketmaster_setting.yml",
+    "spec/fixtures/vcr_cassettes/taskmapper_call.yml",
+    "spec/fixtures/vcr_cassettes/taskmapper_setting.yml",
     "spec/fixtures/vcr_cassettes/tickets_by_attributes.yml",
     "spec/fixtures/vcr_cassettes/tickets_by_defect.yml",
     "spec/fixtures/vcr_cassettes/tickets_by_hierachial.yml",
@@ -71,13 +71,13 @@ Gem::Specification.new do |s|
     "spec/taskmapper-rally_spec.rb",
     "spec/tickets_spec.rb",
     "spec/vcr_setup.rb",
-    "ticketmaster-rally.gemspec"
+    "taskmapper-rally.gemspec"
   ]
-  s.homepage = "http://github.com/simeonwillbanks/ticketmaster-rally"
+  s.homepage = "http://github.com/simeonwillbanks/taskmapper-rally"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.17"
-  s.summary = "Ticketmaster provider for Rally's Ruby REST API"
+  s.summary = "taskmapper provider for Rally's Ruby REST API"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
