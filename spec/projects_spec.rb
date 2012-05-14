@@ -4,11 +4,11 @@ describe TaskMapper::Provider::Rally::Project do
 
   before(:all) do 
     VCR.use_cassette('rally') do 
-      @taskmapper = taskmapper.new(:rally, {:url => 'https://community.rallydev.com/slm', 
+      @taskmapper = TaskMapper.new(:rally, {:url => 'https://community.rallydev.com/slm', 
                                        :username => 'taskmapper-rally@simeonfosterwillbanks.com', 
                                        :password => 'Password'})
     end
-    @klass = taskmapper::Provider::Rally::Project
+    @klass = TaskMapper::Provider::Rally::Project
   end
 
   before(:each) do

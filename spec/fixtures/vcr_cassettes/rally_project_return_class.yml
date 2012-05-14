@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -23,17 +23,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:34:51 GMT
+      - Fri, 11 Nov 2011 02:35:55 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1kjw69t8r8js7djckb3bnx9lx.qd-app-02-trial19089
+      - qd-app-02-trial1myt18wswnfgx16sczoaym9qyz.qd-app-02-trial20485
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1kjw69t8r8js7djckb3bnx9lx.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1myt18wswnfgx16sczoaym9qyz.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 

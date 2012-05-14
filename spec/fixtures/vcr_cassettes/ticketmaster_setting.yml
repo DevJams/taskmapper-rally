@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/user
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -23,17 +23,80 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:29 GMT
+      - Mon, 14 Nov 2011 21:50:43 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-triali5t47ddwfzl31ni8u5zgc01u4.qd-app-03-trial25748
+      - qd-app-02-trialpm1a7ishnnux1l1usbnzy3etj.qd-app-02-trial4494375
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-triali5t47ddwfzl31ni8u5zgc01u4.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialpm1a7ishnnux1l1usbnzy3etj.qd-app-02-trial;Path=/slm;Secure
+      vary: 
+      - Accept-Encoding
+      p3p: 
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+      cache-control: 
+      - no-cache, private,max-age=0,must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: |+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/user/2719713649" objectVersion="4" refObjectName="taskmapper-rally" CreatedAt="Jan 19">
+        <CreationDate>2011-01-19T16:56:34.602Z</CreationDate>
+        <ObjectID>2719713649</ObjectID>
+        <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
+        <Disabled>false</Disabled>
+        <EmailAddress>taskmapper-rally@simeonfosterwillbanks.com</EmailAddress>
+        <LastPasswordUpdateDate>2011-01-19T17:32:11.941Z</LastPasswordUpdateDate>
+        <RevisionHistory rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/revisionhistory/2719713650" type="RevisionHistory" />
+        <Projects />
+        <LoginName>taskmapper-rally@simeonfosterwillbanks.com</LoginName>
+        <UserPermissions>
+          <WorkspacePermission rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspacepermission/2719713649u2712835610w3" refObjectName="Workspace 1 User" type="WorkspacePermission" />
+          <ProjectPermission rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/projectpermission/2719713649u2712835688p2" refObjectName="Sample Project Editor" type="ProjectPermission" />
+        </UserPermissions>
+        <UserProfile rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/userprofile/2719713651" type="UserProfile" />
+      </User>
+      
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
+    body: 
+    headers: 
+      x-rallyintegrationname: 
+      - RubyRestAPI
+      x-rallyintegrationlibrary: 
+      - RallyRestAPI version 1.0.3
+      x-rallyintegrationplatform: 
+      - Ruby 1.9.2
+      x-rallyintegrationos: 
+      - i686-linux
+      authorization: 
+      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
+      content-type: 
+      - text/xml
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Mon, 14 Nov 2011 21:50:45 GMT
+      server: 
+      - Jetty(6.1.26)
+      expires: 
+      - Thu, 01-Jan-1970 00:00:00 GMT
+      rallyrequestid: 
+      - qd-app-02-trial1lpgyiu44zfz013bjwrtmam2h9.qd-app-02-trial4494465
+      content-type: 
+      - text/xml;  charset=utf-8
+      set-cookie: 
+      - JSESSIONID=qd-app-02-trial1lpgyiu44zfz013bjwrtmam2h9.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -80,7 +143,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Artifact?query=(ObjectID%20%3E%200)&project=https://community.rallydev.com/slm/webservice/1.17/project/2712835688
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -101,17 +164,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:30 GMT
+      - Mon, 14 Nov 2011 21:50:46 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial14yv0ozn82jjx2h4h37925zym.qd-app-03-trial25784
+      - qd-app-02-trialpvh1zdq7d6hes87ncvu9g87e.qd-app-02-trial4494498
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial14yv0ozn82jjx2h4h37925zym.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialpvh1zdq7d6hes87ncvu9g87e.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -125,7 +188,85 @@
       <QueryResult rallyAPIMajor="1" rallyAPIMinor="17">
         <Errors />
         <Warnings />
-        <TotalResultCount>54</TotalResultCount>
+        <TotalResultCount>1</TotalResultCount>
+        <StartIndex>1</StartIndex>
+        <PageSize>20</PageSize>
+        <Results>
+          <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688" objectVersion="1" refObjectName="Sample Project" CreatedAt="Jan 18" type="Project">
+            <CreationDate>2011-01-18T15:40:28.807Z</CreationDate>
+            <ObjectID>2712835688</ObjectID>
+            <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
+            <Workspace rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspace/2712835610" refObjectName="Workspace 1" type="Workspace" />
+            <BuildDefinitions>
+              <BuildDefinition rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/builddefinition/2712835693" refObjectName="Default Build Definition" type="BuildDefinition" />
+            </BuildDefinitions>
+            <Children />
+            <Description />
+            <Iterations>
+              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836040" refObjectName="1 - Browse and Book" type="Iteration" />
+              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836046" refObjectName="3 - After Safari" type="Iteration" />
+              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836043" refObjectName="2 - Streamline Operations" type="Iteration" />
+            </Iterations>
+            <Name>Sample Project</Name>
+            <Notes />
+            <Owner>sfw@simeonfosterwillbanks.com</Owner>
+            <Releases />
+            <State>Open</State>
+            <Users />
+          </Object>
+        </Results>
+      </QueryResult>
+      
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Artifact?query=(ObjectID%20%3E%200)&project=https://community.rallydev.com/slm/webservice/1.17/project/2712835688
+    body: 
+    headers: 
+      x-rallyintegrationname: 
+      - RubyRestAPI
+      x-rallyintegrationlibrary: 
+      - RallyRestAPI version 1.0.3
+      x-rallyintegrationplatform: 
+      - Ruby 1.9.2
+      x-rallyintegrationos: 
+      - i686-linux
+      authorization: 
+      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
+      content-type: 
+      - text/xml
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Mon, 14 Nov 2011 21:50:46 GMT
+      server: 
+      - Jetty(6.1.26)
+      expires: 
+      - Thu, 01-Jan-1970 00:00:00 GMT
+      rallyrequestid: 
+      - qd-app-02-trialz9amejl5z3rq1ezxw2qdrz5f3.qd-app-02-trial4494539
+      content-type: 
+      - text/xml;  charset=utf-8
+      set-cookie: 
+      - JSESSIONID=qd-app-02-trialz9amejl5z3rq1ezxw2qdrz5f3.qd-app-02-trial;Path=/slm;Secure
+      vary: 
+      - Accept-Encoding
+      p3p: 
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+      cache-control: 
+      - no-cache, private,max-age=0,must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: |+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <QueryResult rallyAPIMajor="1" rallyAPIMinor="17">
+        <Errors />
+        <Warnings />
+        <TotalResultCount>56</TotalResultCount>
         <StartIndex>1</StartIndex>
         <PageSize>20</PageSize>
         <Results>
@@ -156,7 +297,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836049
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836049
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -177,17 +318,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:31 GMT
+      - Mon, 14 Nov 2011 21:50:47 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1wajc96ge2pz2uqp4n10i2dpp.qd-app-03-trial25808
+      - qd-app-02-trial14xk8943d5za6cf05jib82n2u.qd-app-02-trial4494581
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1wajc96ge2pz2uqp4n10i2dpp.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial14xk8943d5za6cf05jib82n2u.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -234,7 +375,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836055
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836055
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -255,17 +396,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:33 GMT
+      - Mon, 14 Nov 2011 21:50:48 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1aij4zzzlr8nv85xynqeywmwl.qd-app-03-trial25823
+      - qd-app-02-trial1b22um5y23uua1ejgausskl2d5.qd-app-02-trial4494659
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1aij4zzzlr8nv85xynqeywmwl.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1b22um5y23uua1ejgausskl2d5.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -312,7 +453,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836061
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836061
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -333,17 +474,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:34 GMT
+      - Mon, 14 Nov 2011 21:50:49 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialfz2aoh20a9pgrjz1a6cie68e.qd-app-03-trial25865
+      - qd-app-02-trial6hjlst61dav5daaqxko1yliw.qd-app-02-trial4494708
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialfz2aoh20a9pgrjz1a6cie68e.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial6hjlst61dav5daaqxko1yliw.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -388,7 +529,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836067
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836067
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -409,17 +550,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:35 GMT
+      - Mon, 14 Nov 2011 21:50:50 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial40bs4ijuovjk8vu6sy6e0zg7.qd-app-03-trial25914
+      - qd-app-02-trial1cpsahau009gfm3gf73uwc85.qd-app-02-trial4494762
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial40bs4ijuovjk8vu6sy6e0zg7.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1cpsahau009gfm3gf73uwc85.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -464,7 +605,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836073
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836073
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -485,17 +626,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:36 GMT
+      - Mon, 14 Nov 2011 21:50:50 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial99ipo7e09zo31hrj20u98flbp.qd-app-03-trial25956
+      - qd-app-02-trial1r9ws2ri7lqrl1r3jpajh13pr8.qd-app-02-trial4494823
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial99ipo7e09zo31hrj20u98flbp.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1r9ws2ri7lqrl1r3jpajh13pr8.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -540,7 +681,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836079
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836079
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -561,17 +702,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:37 GMT
+      - Mon, 14 Nov 2011 21:50:51 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1txjx8knq9mdh4i5bdky8wtvd.qd-app-03-trial26008
+      - qd-app-02-trial1szvepyllwrw65ia47u0x0vjc.qd-app-02-trial4494890
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1txjx8knq9mdh4i5bdky8wtvd.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1szvepyllwrw65ia47u0x0vjc.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -616,7 +757,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836085
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836085
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -637,17 +778,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:38 GMT
+      - Mon, 14 Nov 2011 21:50:52 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialw0pbzth1osd11ss5duyviia13.qd-app-03-trial26043
+      - qd-app-02-trial1lkuisej10su7v7uhy5lx27q9.qd-app-02-trial4494955
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialw0pbzth1osd11ss5duyviia13.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1lkuisej10su7v7uhy5lx27q9.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -692,7 +833,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836091
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/hierarchicalrequirement/2712836091
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -713,17 +854,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:39 GMT
+      - Mon, 14 Nov 2011 21:50:53 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial9dn07ywz3tfm1v0cr3y629u3p.qd-app-03-trial26092
+      - qd-app-02-trial1a336cb5ib2ds1q3jndsir674b.qd-app-02-trial4494991
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial9dn07ywz3tfm1v0cr3y629u3p.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1a336cb5ib2ds1q3jndsir674b.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -775,7 +916,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2780204578
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2780204578
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -796,17 +937,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:40 GMT
+      - Mon, 14 Nov 2011 21:50:53 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialqshpr5978yxb1j5rsy0c9g9al.qd-app-03-trial26148
+      - qd-app-02-trial1esgphzyxruihl41278jxbldp.qd-app-02-trial4495023
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialqshpr5978yxb1j5rsy0c9g9al.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1esgphzyxruihl41278jxbldp.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -843,7 +984,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2780205180
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2780205180
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -864,17 +1005,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:41 GMT
+      - Mon, 14 Nov 2011 21:50:54 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1x9yfs99hnlbmhz320w59z3up.qd-app-03-trial26197
+      - qd-app-02-trial1era8b93ln7valki5g7lnjhif.qd-app-02-trial4495058
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1x9yfs99hnlbmhz320w59z3up.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1era8b93ln7valki5g7lnjhif.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -911,7 +1052,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2780205298
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2780205298
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -932,17 +1073,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:43 GMT
+      - Mon, 14 Nov 2011 21:50:55 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1ta881aj5irysj1en2o5qhtfu.qd-app-03-trial26253
+      - qd-app-02-trial7p5n6ex5rv3lese6t2ve98yz.qd-app-02-trial4495083
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1ta881aj5irysj1en2o5qhtfu.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial7p5n6ex5rv3lese6t2ve98yz.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -953,12 +1094,12 @@
       - chunked
     body: |+
       <?xml version="1.0" encoding="UTF-8"?>
-      <Defect rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/2780205298" objectVersion="98" refObjectName="Safari email alert has wrong subject" CreatedAt="Jan 29">
+      <Defect rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/2780205298" objectVersion="100" refObjectName="Safari email alert has wrong subject" CreatedAt="Jan 29">
         <CreationDate>2011-01-29T19:35:56.668Z</CreationDate>
         <ObjectID>2780205298</ObjectID>
         <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
         <Workspace rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspace/2712835610" refObjectName="Workspace 1" type="Workspace" />
-        <Description>The safari email alert message is 'Safari Email.' It should be 'Awesome Safari Email.'</Description>
+        <Description>A brand new awesome description</Description>
         <Discussion>
           <ConversationPost rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2990260871" type="ConversationPost" />
           <ConversationPost rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2988718166" type="ConversationPost" />
@@ -966,7 +1107,7 @@
           <ConversationPost rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2988719307" type="ConversationPost" />
         </Discussion>
         <FormattedID>DE1</FormattedID>
-        <LastUpdateDate>2011-11-08T21:31:17.166Z</LastUpdateDate>
+        <LastUpdateDate>2011-11-11T02:49:49.994Z</LastUpdateDate>
         <Name>Safari email alert has wrong subject</Name>
         <Notes />
         <Project rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688" refObjectName="Sample Project" type="Project" />
@@ -975,6 +1116,7 @@
         <AffectsDoc>false</AffectsDoc>
         <Attachments />
         <Blocked>false</Blocked>
+        <ClosedDate>2011-11-11T02:48:02.631Z</ClosedDate>
         <Duplicates />
         <Environment>None</Environment>
         <Priority>None</Priority>
@@ -983,12 +1125,13 @@
         <Resolution>None</Resolution>
         <ScheduleState>Defined</ScheduleState>
         <Severity>None</Severity>
-        <State>Submitted</State>
+        <State>Closed</State>
         <SubmittedBy>sfw@simeonfosterwillbanks.com</SubmittedBy>
         <TaskActualTotal>0.0</TaskActualTotal>
         <TaskEstimateTotal>0.0</TaskEstimateTotal>
         <TaskRemainingTotal>0.0</TaskRemainingTotal>
         <Tasks>
+          <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/4716408367" refObjectName="TaskTesting" type="Task" />
           <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/4694941632" refObjectName="TaskTesting" type="Task" />
           <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/2904309530" refObjectName="TaskTesting" type="Task" />
           <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/2990261501" refObjectName="TaskTesting" type="Task" />
@@ -1007,7 +1150,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833369261
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833369261
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1028,17 +1171,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:44 GMT
+      - Mon, 14 Nov 2011 21:50:56 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialjhao624tpuaz376oqa6twx7e.qd-app-03-trial26316
+      - qd-app-02-trial1stdbj89k22erjc7z8szqubrv.qd-app-02-trial4495105
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialjhao624tpuaz376oqa6twx7e.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1stdbj89k22erjc7z8szqubrv.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1085,7 +1228,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833370620
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833370620
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1106,17 +1249,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:45 GMT
+      - Mon, 14 Nov 2011 21:51:00 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial8p77g9whx399n5af7kq0ykmp.qd-app-03-trial26364
+      - qd-app-02-trialmqtcpflud7dr1fy24v8aed3xl.qd-app-02-trial4495239
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial8p77g9whx399n5af7kq0ykmp.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialmqtcpflud7dr1fy24v8aed3xl.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1163,7 +1306,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833370895
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833370895
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1184,17 +1327,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:46 GMT
+      - Mon, 14 Nov 2011 21:51:01 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialcoxzdqg5eq2k1rrinsppxaopt.qd-app-03-trial26421
+      - qd-app-02-trialout7j369qnfk1af45fumaqfne.qd-app-02-trial4495257
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialcoxzdqg5eq2k1rrinsppxaopt.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialout7j369qnfk1af45fumaqfne.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1241,7 +1384,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833370974
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833370974
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1262,17 +1405,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:52 GMT
+      - Mon, 14 Nov 2011 21:51:02 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialq9c1ul1zausd1pd37mzcbmyq6.qd-app-03-trial26620
+      - qd-app-02-triallmry1538dwx359rosypx87zf.qd-app-02-trial4495297
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialq9c1ul1zausd1pd37mzcbmyq6.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-triallmry1538dwx359rosypx87zf.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1319,7 +1462,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833371135
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833371135
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1340,17 +1483,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:53 GMT
+      - Mon, 14 Nov 2011 21:51:02 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialg820zqkoh3ul8n02e7v06gyb.qd-app-03-trial26650
+      - qd-app-02-trial1w4747tnur3bzwmefb4xbbvtz.qd-app-02-trial4495365
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialg820zqkoh3ul8n02e7v06gyb.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1w4747tnur3bzwmefb4xbbvtz.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1397,7 +1540,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833371231
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833371231
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1418,17 +1561,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:54 GMT
+      - Mon, 14 Nov 2011 21:51:03 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1tv3fqjenntszspuqus1rbz54.qd-app-03-trial26671
+      - qd-app-02-trial1c0vbrvc5x6xs148ibkddnnqq5.qd-app-02-trial4495392
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1tv3fqjenntszspuqus1rbz54.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1c0vbrvc5x6xs148ibkddnnqq5.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1475,7 +1618,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833371298
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833371298
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1496,17 +1639,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:56 GMT
+      - Mon, 14 Nov 2011 21:51:04 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trialrjz4fudxkul2ruuqxndn69sa.qd-app-02-trial25259
+      - qd-app-02-trial1wjd3frl38dzb1d1nriq804p3x.qd-app-02-trial4495417
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trialrjz4fudxkul2ruuqxndn69sa.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1wjd3frl38dzb1d1nriq804p3x.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1553,7 +1696,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833372047
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833372047
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1574,17 +1717,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:57 GMT
+      - Mon, 14 Nov 2011 21:51:05 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialp5visyrzx6iucsr30yv1rc30.qd-app-03-trial26701
+      - qd-app-02-trial1um76sg0o0obs17mfyki5ap1e9.qd-app-02-trial4495460
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialp5visyrzx6iucsr30yv1rc30.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1um76sg0o0obs17mfyki5ap1e9.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1631,7 +1774,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833372201
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833372201
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1652,17 +1795,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:58 GMT
+      - Mon, 14 Nov 2011 21:51:05 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialqmmww9lx1ymg1hl7da65c7pmi.qd-app-03-trial26716
+      - qd-app-02-trial721dhbbweo1ox971olcf5prv.qd-app-02-trial4495476
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialqmmww9lx1ymg1hl7da65c7pmi.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial721dhbbweo1ox971olcf5prv.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1709,7 +1852,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Artifact?query=(ObjectID%20%3E%200)&start=21&pagesize=20&project=https://community.rallydev.com/slm/webservice/1.17/project/2712835688
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Artifact?query=(ObjectID%20%3E%200)&start=21&pagesize=20&project=https://community.rallydev.com/slm/webservice/1.17/project/2712835688
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1730,17 +1873,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:38:59 GMT
+      - Mon, 14 Nov 2011 21:51:06 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trialjk7co0rxn9611bafwn1pvtqvu.qd-app-02-trial25318
+      - qd-app-02-trial1u7i6nnlbp84b1ef72945i6pmp.qd-app-02-trial4495504
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trialjk7co0rxn9611bafwn1pvtqvu.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1u7i6nnlbp84b1ef72945i6pmp.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1754,7 +1897,7 @@
       <QueryResult rallyAPIMajor="1" rallyAPIMinor="17">
         <Errors />
         <Warnings />
-        <TotalResultCount>54</TotalResultCount>
+        <TotalResultCount>56</TotalResultCount>
         <StartIndex>21</StartIndex>
         <PageSize>20</PageSize>
         <Results>
@@ -1785,7 +1928,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833372372
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2833372372
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1806,17 +1949,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:00 GMT
+      - Mon, 14 Nov 2011 21:51:07 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1kxq345k0dtowxbvjx8ghrxp.qd-app-03-trial26793
+      - qd-app-02-trial19gzvlj88mem6dpgla8y5t1f9.qd-app-02-trial4495529
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1kxq345k0dtowxbvjx8ghrxp.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial19gzvlj88mem6dpgla8y5t1f9.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1863,7 +2006,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2870792198
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2870792198
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1884,17 +2027,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:02 GMT
+      - Mon, 14 Nov 2011 21:51:08 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialk9gcm08gv8rt1qtq7y6ggrhs1.qd-app-03-trial26826
+      - qd-app-02-trial3jv1jawfgmif4w063srp4dms.qd-app-02-trial4495551
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialk9gcm08gv8rt1qtq7y6ggrhs1.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial3jv1jawfgmif4w063srp4dms.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -1941,7 +2084,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2870793090
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2870793090
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -1962,17 +2105,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:03 GMT
+      - Mon, 14 Nov 2011 21:51:09 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1hj6syz94pvmp5k8gdfjjujoa.qd-app-03-trial26865
+      - qd-app-02-trial133k4fbboxxho8hbdiyjvs8ei.qd-app-02-trial4495589
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1hj6syz94pvmp5k8gdfjjujoa.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial133k4fbboxxho8hbdiyjvs8ei.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2019,7 +2162,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2870951426
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2870951426
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2040,17 +2183,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:04 GMT
+      - Mon, 14 Nov 2011 21:51:09 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1nic7arxbjwzv1mj0xzobod59a.qd-app-02-trial25464
+      - qd-app-02-trial1af3ggjjyrdd93je7ed1ka8ql.qd-app-02-trial4495601
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1nic7arxbjwzv1mj0xzobod59a.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1af3ggjjyrdd93je7ed1ka8ql.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2097,7 +2240,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2870952373
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2870952373
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2118,17 +2261,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:05 GMT
+      - Mon, 14 Nov 2011 21:51:10 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1v39ddtfpl6ov53nk4q04bfsk.qd-app-03-trial26935
+      - qd-app-02-trial1tzj2mj98uxi1hhv238ioqho1.qd-app-02-trial4495633
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1v39ddtfpl6ov53nk4q04bfsk.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1tzj2mj98uxi1hhv238ioqho1.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2175,7 +2318,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2871088489
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2871088489
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2196,17 +2339,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:06 GMT
+      - Mon, 14 Nov 2011 21:51:11 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1hr4fmnd4fqovzxjfcjbgtlwa.qd-app-02-trial25549
+      - qd-app-02-trialql2zcuq0dpzvwd225uzijk4.qd-app-02-trial4495666
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1hr4fmnd4fqovzxjfcjbgtlwa.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialql2zcuq0dpzvwd225uzijk4.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2253,7 +2396,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2872127283
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2872127283
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2274,17 +2417,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:07 GMT
+      - Mon, 14 Nov 2011 21:51:12 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-triallo590wl67r7116lxg2l1orern.qd-app-02-trial25598
+      - qd-app-02-trial1085khbk32lqc1nyspraq98eh8.qd-app-02-trial4495705
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-triallo590wl67r7116lxg2l1orern.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1085khbk32lqc1nyspraq98eh8.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2331,7 +2474,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2872128015
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2872128015
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2352,17 +2495,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:09 GMT
+      - Mon, 14 Nov 2011 21:51:13 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial19lpo57jtn6h16nh0od0xluo.qd-app-03-trial27073
+      - qd-app-02-trial9zgcok99lo8q1hwl11p5or8j7.qd-app-02-trial4495745
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial19lpo57jtn6h16nh0od0xluo.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial9zgcok99lo8q1hwl11p5or8j7.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2409,7 +2552,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2891123673
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2891123673
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2430,17 +2573,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:10 GMT
+      - Mon, 14 Nov 2011 21:51:13 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1hfg93thy00z11fvrejoonmykk.qd-app-03-trial27115
+      - qd-app-02-trialxc5at8h1dro89w4z3m1xkjm2.qd-app-02-trial4495782
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1hfg93thy00z11fvrejoonmykk.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialxc5at8h1dro89w4z3m1xkjm2.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2487,7 +2630,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904199035
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904199035
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2508,17 +2651,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:11 GMT
+      - Mon, 14 Nov 2011 21:51:14 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial4xrv40lvxt9t1gk35bp0bv3q0.qd-app-03-trial27171
+      - qd-app-02-trialow6182stezui2of5nk6tlr6j.qd-app-02-trial4495821
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial4xrv40lvxt9t1gk35bp0bv3q0.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialow6182stezui2of5nk6tlr6j.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2565,7 +2708,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904203328
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904203328
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2586,17 +2729,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:12 GMT
+      - Mon, 14 Nov 2011 21:51:15 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial12frz33fngqyrphj4j0f8l3js.qd-app-02-trial25766
+      - qd-app-02-trial1g0lnt6nqxerioe3bz9kh335z.qd-app-02-trial4495879
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial12frz33fngqyrphj4j0f8l3js.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1g0lnt6nqxerioe3bz9kh335z.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2643,7 +2786,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904204000
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904204000
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2664,17 +2807,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:13 GMT
+      - Mon, 14 Nov 2011 21:51:16 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1sal0s3jtetlug86blh3296w9.qd-app-03-trial27241
+      - qd-app-02-trial1kmf42cpmf0za19bfeqnpebje4.qd-app-02-trial4495917
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1sal0s3jtetlug86blh3296w9.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1kmf42cpmf0za19bfeqnpebje4.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2721,7 +2864,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904204581
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904204581
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2742,17 +2885,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:15 GMT
+      - Mon, 14 Nov 2011 21:51:17 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1bzplbed0rfwtkbct2aflhkfq.qd-app-03-trial27283
+      - qd-app-02-trial1us3ilhakwtr51prjwf25wrdtb.qd-app-02-trial4495952
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1bzplbed0rfwtkbct2aflhkfq.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1us3ilhakwtr51prjwf25wrdtb.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2799,7 +2942,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2904308027
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2904308027
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2820,17 +2963,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:16 GMT
+      - Mon, 14 Nov 2011 21:51:17 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1f06t4fa1yohh15k7j2m23rajm.qd-app-02-trial25889
+      - qd-app-02-trial1arror4mlmwjsteof1fr1zcp1.qd-app-02-trial4495983
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1f06t4fa1yohh15k7j2m23rajm.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1arror4mlmwjsteof1fr1zcp1.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2867,7 +3010,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904309488
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2904309488
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2888,17 +3031,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:17 GMT
+      - Mon, 14 Nov 2011 21:51:18 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1i8thc4a50gcvyr7kdzkvjn5h.qd-app-03-trial27371
+      - qd-app-02-trialmtdb10tp5pbu1oszhl5bepsnt.qd-app-02-trial4496025
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1i8thc4a50gcvyr7kdzkvjn5h.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialmtdb10tp5pbu1oszhl5bepsnt.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -2945,7 +3088,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2904309530
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2904309530
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -2966,17 +3109,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:18 GMT
+      - Mon, 14 Nov 2011 21:51:19 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial141qnrfrxaeiw17jcfd0y790na.qd-app-03-trial27420
+      - qd-app-02-trialtdej1nsctg51ndmi97fgp902.qd-app-02-trial4496062
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial141qnrfrxaeiw17jcfd0y790na.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialtdej1nsctg51ndmi97fgp902.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3013,7 +3156,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2967182304
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2967182304
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3034,17 +3177,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:20 GMT
+      - Mon, 14 Nov 2011 21:51:20 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trials1spb04znl4810pqr301efup7.qd-app-02-trial26009
+      - qd-app-02-trial162837f0qgynk17opo6jxp4639.qd-app-02-trial4496101
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trials1spb04znl4810pqr301efup7.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial162837f0qgynk17opo6jxp4639.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3091,7 +3234,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2967182543
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2967182543
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3112,17 +3255,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:21 GMT
+      - Mon, 14 Nov 2011 21:51:20 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1sm05o3b50g4e1g0xneli8ldof.qd-app-03-trial27496
+      - qd-app-02-trial61lhwaab4rmuaqw6docgsokl.qd-app-02-trial4496140
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1sm05o3b50g4e1g0xneli8ldof.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial61lhwaab4rmuaqw6docgsokl.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3159,7 +3302,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2967188208
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2967188208
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3180,17 +3323,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:23 GMT
+      - Mon, 14 Nov 2011 21:51:21 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial2ynabaewm6qtmx262plyabug.qd-app-03-trial27531
+      - qd-app-02-trialmp3qxx7fsj1ytjjvgkfd9cn1.qd-app-02-trial4496161
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial2ynabaewm6qtmx262plyabug.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialmp3qxx7fsj1ytjjvgkfd9cn1.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3237,7 +3380,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2967188369
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2967188369
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3258,17 +3401,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:26 GMT
+      - Mon, 14 Nov 2011 21:51:22 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial11w7ckwxzr7r5dikv2oxatxu9.qd-app-03-trial27631
+      - qd-app-02-trial1km870ttsblj2bnj0rcu17glx.qd-app-02-trial4496197
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial11w7ckwxzr7r5dikv2oxatxu9.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1km870ttsblj2bnj0rcu17glx.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3305,7 +3448,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Artifact?query=(ObjectID%20%3E%200)&start=41&pagesize=20&project=https://community.rallydev.com/slm/webservice/1.17/project/2712835688
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Artifact?query=(ObjectID%20%3E%200)&start=41&pagesize=20&project=https://community.rallydev.com/slm/webservice/1.17/project/2712835688
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3326,17 +3469,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:28 GMT
+      - Mon, 14 Nov 2011 21:51:23 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial10934c29f4d62147kwvfz88bch.qd-app-02-trial26239
+      - qd-app-02-trialpk5yuceaco9vqxg8iz94e9b0.qd-app-02-trial4496221
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial10934c29f4d62147kwvfz88bch.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialpk5yuceaco9vqxg8iz94e9b0.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3350,7 +3493,7 @@
       <QueryResult rallyAPIMajor="1" rallyAPIMinor="17">
         <Errors />
         <Warnings />
-        <TotalResultCount>54</TotalResultCount>
+        <TotalResultCount>56</TotalResultCount>
         <StartIndex>41</StartIndex>
         <PageSize>20</PageSize>
         <Results>
@@ -3368,6 +3511,8 @@
           <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/3833668871" refObjectName="TaskTesting" type="Task" />
           <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/4694941557" refObjectName="Testing" type="Defect" />
           <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/4694941632" refObjectName="TaskTesting" type="Task" />
+          <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/4716408367" refObjectName="TaskTesting" type="Task" />
+          <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/4716419794" refObjectName="Testing" type="Defect" />
         </Results>
       </QueryResult>
       
@@ -3375,7 +3520,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2967372969
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2967372969
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3396,17 +3541,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:31 GMT
+      - Mon, 14 Nov 2011 21:51:24 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial171rwz6z7o4o416ibfdg3njsdi.qd-app-03-trial27757
+      - qd-app-02-trial1cjxyak9x17871o68h8idu2j4u.qd-app-02-trial4496251
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial171rwz6z7o4o416ibfdg3njsdi.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1cjxyak9x17871o68h8idu2j4u.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3453,7 +3598,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2967373101
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2967373101
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3474,17 +3619,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:32 GMT
+      - Mon, 14 Nov 2011 21:51:24 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1qtocogylmjbo1oqw1h3c9qbl9.qd-app-02-trial26332
+      - qd-app-02-trial1c13cz267eto2hv6had834jng.qd-app-02-trial4496276
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1qtocogylmjbo1oqw1h3c9qbl9.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1c13cz267eto2hv6had834jng.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3521,7 +3666,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2990261465
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2990261465
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3542,17 +3687,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:33 GMT
+      - Mon, 14 Nov 2011 21:51:25 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-triallrtk1qrkbh001wblfnbpnl7tm.qd-app-03-trial27836
+      - qd-app-02-trial2pyx9kw28ua73dp7owwyeabp.qd-app-02-trial4496284
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-triallrtk1qrkbh001wblfnbpnl7tm.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial2pyx9kw28ua73dp7owwyeabp.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3599,7 +3744,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2990261501
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/2990261501
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3620,17 +3765,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:34 GMT
+      - Mon, 14 Nov 2011 21:51:26 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1614mzo21po11e4h6n75qh6nw.qd-app-03-trial27892
+      - qd-app-02-trialxdxa61ipxmfdiy0nstnh0yot.qd-app-02-trial4496313
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1614mzo21po11e4h6n75qh6nw.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialxdxa61ipxmfdiy0nstnh0yot.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3667,7 +3812,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/3582864613
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/3582864613
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3688,17 +3833,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:36 GMT
+      - Mon, 14 Nov 2011 21:51:27 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialzd05fnpznymtwb9jm01w8j1z.qd-app-03-trial27948
+      - qd-app-02-trialgrwccow7szxy1tk1mz71v6wm7.qd-app-02-trial4496343
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialzd05fnpznymtwb9jm01w8j1z.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialgrwccow7szxy1tk1mz71v6wm7.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3745,7 +3890,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/3582864714
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/3582864714
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3766,17 +3911,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:37 GMT
+      - Mon, 14 Nov 2011 21:51:28 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1ay2gcrpt7kyval40sovk4eab.qd-app-02-trial26513
+      - qd-app-02-trial1p0lri8a1zvl4rvhjm8eetg0g.qd-app-02-trial4496382
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1ay2gcrpt7kyval40sovk4eab.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1p0lri8a1zvl4rvhjm8eetg0g.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3813,7 +3958,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/3831635899
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/3831635899
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3834,17 +3979,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:38 GMT
+      - Mon, 14 Nov 2011 21:51:28 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trialamyxhh8x0sor1ho3luq5iwzs5.qd-app-03-trial28027
+      - qd-app-02-trialiw766cb7dp72flegl9el99qg.qd-app-02-trial4496424
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trialamyxhh8x0sor1ho3luq5iwzs5.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialiw766cb7dp72flegl9el99qg.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3891,7 +4036,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/3831685531
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/3831685531
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3912,17 +4057,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:39 GMT
+      - Mon, 14 Nov 2011 21:51:29 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1df9ee1w434tx1v12q65gg510x.qd-app-02-trial26577
+      - qd-app-02-trial1izun7nohv75r1xy7nrnecy9on.qd-app-02-trial4496469
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1df9ee1w434tx1v12q65gg510x.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1izun7nohv75r1xy7nrnecy9on.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -3959,7 +4104,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/3833150881
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/3833150881
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -3980,17 +4125,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:40 GMT
+      - Mon, 14 Nov 2011 21:51:30 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1tponfhwtvbile8gd7mbwpxn3.qd-app-03-trial28069
+      - qd-app-02-trial1ijg1zev2h3pj1dmd5ivn5zns5.qd-app-02-trial4496511
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1tponfhwtvbile8gd7mbwpxn3.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1ijg1zev2h3pj1dmd5ivn5zns5.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -4037,7 +4182,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/3833150966
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/3833150966
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -4058,17 +4203,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:42 GMT
+      - Mon, 14 Nov 2011 21:51:31 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1ai2f2fogdrbnxyr7bkdzsx4h.qd-app-03-trial28090
+      - qd-app-02-trialjryip83gdxvd1a4uv2gvix47z.qd-app-02-trial4496558
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1ai2f2fogdrbnxyr7bkdzsx4h.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialjryip83gdxvd1a4uv2gvix47z.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -4105,7 +4250,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/3833572773
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/3833572773
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -4126,17 +4271,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:43 GMT
+      - Mon, 14 Nov 2011 21:51:32 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial1hk711prqxrmcol5oxe2eg4i.qd-app-03-trial28110
+      - qd-app-02-trial1mai7iru6be2tegr0plcacquy.qd-app-02-trial4496585
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial1hk711prqxrmcol5oxe2eg4i.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1mai7iru6be2tegr0plcacquy.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -4183,7 +4328,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/3833668871
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/3833668871
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -4204,17 +4349,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:44 GMT
+      - Mon, 14 Nov 2011 21:51:33 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial5dj80r2qczrucer8i3vnzl78.qd-app-02-trial26659
+      - qd-app-02-trial1idophyt7wttsjbjvt39eb6qu.qd-app-02-trial4496617
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial5dj80r2qczrucer8i3vnzl78.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1idophyt7wttsjbjvt39eb6qu.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -4251,7 +4396,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/4694941557
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/4694941557
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -4272,17 +4417,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:45 GMT
+      - Mon, 14 Nov 2011 21:51:34 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-03-trial44jymw5k7zmo1xkmiqqvjgvlw.qd-app-03-trial28167
+      - qd-app-02-trial1nz2l7de17684hsq5mrdalb4u.qd-app-02-trial4496653
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-03-trial44jymw5k7zmo1xkmiqqvjgvlw.qd-app-03-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1nz2l7de17684hsq5mrdalb4u.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -4329,7 +4474,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/4694941632
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/4694941632
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -4350,17 +4495,17 @@
       message: OK
     headers: 
       date: 
-      - Fri, 11 Nov 2011 02:39:47 GMT
+      - Mon, 14 Nov 2011 21:51:35 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial70nk4v1t0tdmhanukarjty7f.qd-app-02-trial26722
+      - qd-app-02-trialbad4mmzejt0xvk6s1r5cgk2c.qd-app-02-trial4496680
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial70nk4v1t0tdmhanukarjty7f.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trialbad4mmzejt0xvk6s1r5cgk2c.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -4392,5 +4537,151 @@
         <TaskIndex>10</TaskIndex>
         <WorkProduct rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/2780205298" refObjectName="Safari email alert has wrong subject" type="Defect" />
       </Task>
+      
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/task/4716408367
+    body: 
+    headers: 
+      x-rallyintegrationname: 
+      - RubyRestAPI
+      x-rallyintegrationlibrary: 
+      - RallyRestAPI version 1.0.3
+      x-rallyintegrationplatform: 
+      - Ruby 1.9.2
+      x-rallyintegrationos: 
+      - i686-linux
+      authorization: 
+      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
+      content-type: 
+      - text/xml
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Mon, 14 Nov 2011 21:51:36 GMT
+      server: 
+      - Jetty(6.1.26)
+      expires: 
+      - Thu, 01-Jan-1970 00:00:00 GMT
+      rallyrequestid: 
+      - qd-app-02-trial1plqvy12v9q21106kzrxra1j85.qd-app-02-trial4496694
+      content-type: 
+      - text/xml;  charset=utf-8
+      set-cookie: 
+      - JSESSIONID=qd-app-02-trial1plqvy12v9q21106kzrxra1j85.qd-app-02-trial;Path=/slm;Secure
+      vary: 
+      - Accept-Encoding
+      p3p: 
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+      cache-control: 
+      - no-cache, private,max-age=0,must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: |+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <Task rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/task/4716408367" objectVersion="1" refObjectName="TaskTesting" CreatedAt="Nov 10">
+        <CreationDate>2011-11-11T02:49:49.960Z</CreationDate>
+        <ObjectID>4716408367</ObjectID>
+        <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
+        <Workspace rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspace/2712835610" refObjectName="Workspace 1" type="Workspace" />
+        <Description>Here we go tasks</Description>
+        <Discussion />
+        <FormattedID>TA14</FormattedID>
+        <LastUpdateDate>2011-11-11T02:49:49.993Z</LastUpdateDate>
+        <Name>TaskTesting</Name>
+        <Notes />
+        <RevisionHistory rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/revisionhistory/4716408368" type="RevisionHistory" />
+        <Tags />
+        <Attachments />
+        <Blocked>false</Blocked>
+        <Project rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688" refObjectName="Sample Project" type="Project" />
+        <Rank>549999999999.999</Rank>
+        <State>Defined</State>
+        <TaskIndex>11</TaskIndex>
+        <WorkProduct rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/2780205298" refObjectName="Safari email alert has wrong subject" type="Defect" />
+      </Task>
+      
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/4716419794
+    body: 
+    headers: 
+      x-rallyintegrationname: 
+      - RubyRestAPI
+      x-rallyintegrationlibrary: 
+      - RallyRestAPI version 1.0.3
+      x-rallyintegrationplatform: 
+      - Ruby 1.9.2
+      x-rallyintegrationos: 
+      - i686-linux
+      authorization: 
+      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
+      content-type: 
+      - text/xml
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Mon, 14 Nov 2011 21:51:36 GMT
+      server: 
+      - Jetty(6.1.26)
+      expires: 
+      - Thu, 01-Jan-1970 00:00:00 GMT
+      rallyrequestid: 
+      - qd-app-02-trial14mw52vf8bhp11ril6gvd1nppj.qd-app-02-trial4496713
+      content-type: 
+      - text/xml;  charset=utf-8
+      set-cookie: 
+      - JSESSIONID=qd-app-02-trial14mw52vf8bhp11ril6gvd1nppj.qd-app-02-trial;Path=/slm;Secure
+      vary: 
+      - Accept-Encoding
+      p3p: 
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+      cache-control: 
+      - no-cache, private,max-age=0,must-revalidate
+      transfer-encoding: 
+      - chunked
+    body: |+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <Defect rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/4716419794" objectVersion="1" refObjectName="Testing" CreatedAt="Nov 10">
+        <CreationDate>2011-11-11T02:48:25.435Z</CreationDate>
+        <ObjectID>4716419794</ObjectID>
+        <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
+        <Workspace rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspace/2712835610" refObjectName="Workspace 1" type="Workspace" />
+        <Description>Here we go</Description>
+        <Discussion />
+        <FormattedID>DE38</FormattedID>
+        <LastUpdateDate>2011-11-11T02:48:25.538Z</LastUpdateDate>
+        <Name>Testing</Name>
+        <Notes />
+        <Project rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688" refObjectName="Sample Project" type="Project" />
+        <RevisionHistory rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/revisionhistory/4716419795" type="RevisionHistory" />
+        <Tags />
+        <AffectsDoc>false</AffectsDoc>
+        <Attachments />
+        <Blocked>false</Blocked>
+        <Duplicates />
+        <Environment>None</Environment>
+        <Priority>None</Priority>
+        <Rank>372.530</Rank>
+        <ReleaseNote>false</ReleaseNote>
+        <Resolution>None</Resolution>
+        <ScheduleState>Defined</ScheduleState>
+        <Severity>None</Severity>
+        <State>Submitted</State>
+        <TaskActualTotal>0.0</TaskActualTotal>
+        <TaskEstimateTotal>0.0</TaskEstimateTotal>
+        <TaskRemainingTotal>0.0</TaskRemainingTotal>
+        <Tasks />
+      </Defect>
       
     http_version: "1.1"

@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/user
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/user
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -44,16 +44,16 @@
       - chunked
     body: |+
       <?xml version="1.0" encoding="UTF-8"?>
-      <User rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/user/2719713649" objectVersion="4" refObjectName="ticketmaster-rally" CreatedAt="Jan 19">
+      <User rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/user/2719713649" objectVersion="4" refObjectName="taskmapper-rally" CreatedAt="Jan 19">
         <CreationDate>2011-01-19T16:56:34.602Z</CreationDate>
         <ObjectID>2719713649</ObjectID>
         <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
         <Disabled>false</Disabled>
-        <EmailAddress>ticketmaster-rally@simeonfosterwillbanks.com</EmailAddress>
+        <EmailAddress>taskmapper-rally@simeonfosterwillbanks.com</EmailAddress>
         <LastPasswordUpdateDate>2011-01-19T17:32:11.941Z</LastPasswordUpdateDate>
         <RevisionHistory rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/revisionhistory/2719713650" type="RevisionHistory" />
         <Projects />
-        <LoginName>ticketmaster-rally@simeonfosterwillbanks.com</LoginName>
+        <LoginName>taskmapper-rally@simeonfosterwillbanks.com</LoginName>
         <UserPermissions>
           <WorkspacePermission rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspacepermission/2719713649u2712835610w3" refObjectName="Workspace 1 User" type="WorkspacePermission" />
           <ProjectPermission rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/projectpermission/2719713649u2712835688p2" refObjectName="Sample Project Editor" type="ProjectPermission" />
@@ -65,7 +65,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
     body: 
     headers: 
       x-rallyintegrationname: 

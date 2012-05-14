@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -23,17 +23,17 @@
       message: OK
     headers: 
       date: 
-      - Mon, 14 Nov 2011 21:51:38 GMT
+      - Fri, 11 Nov 2011 02:48:24 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1jybyry7ed89r1my6wydia162i.qd-app-02-trial4496728
+      - qd-app-02-trial12zer5ho1yqxyvp9fgv7kg254.qd-app-02-trial35535
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1jybyry7ed89r1my6wydia162i.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial12zer5ho1yqxyvp9fgv7kg254.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -79,9 +79,9 @@
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/ConversationPost?query=(ObjectID%20=%202988719307)&fetch=false&project=https://community.rallydev.com/slm/webservice/1.17/project/2712835688
-    body: 
+    method: :post
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Defect/create
+    body: <?xml version="1.0" encoding="UTF-8"?><Defect><Description>Here we go</Description><Name>Testing</Name><Project ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688"/><ScheduleState>Defined</ScheduleState><State>Submitted</State></Defect>
     headers: 
       x-rallyintegrationname: 
       - RubyRestAPI
@@ -101,17 +101,17 @@
       message: OK
     headers: 
       date: 
-      - Mon, 14 Nov 2011 21:51:38 GMT
+      - Fri, 11 Nov 2011 02:48:25 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1sk76jnab1nnwsn6t8fbfde7h.qd-app-02-trial4496756
+      - qd-app-02-trial1u1x4375mumst1dcfk1e0gh1bi.qd-app-02-trial35543
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1sk76jnab1nnwsn6t8fbfde7h.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1u1x4375mumst1dcfk1e0gh1bi.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -122,22 +122,17 @@
       - chunked
     body: |+
       <?xml version="1.0" encoding="UTF-8"?>
-      <QueryResult rallyAPIMajor="1" rallyAPIMinor="17">
+      <CreateResult rallyAPIMajor="1" rallyAPIMinor="17">
         <Errors />
         <Warnings />
-        <TotalResultCount>1</TotalResultCount>
-        <StartIndex>1</StartIndex>
-        <PageSize>20</PageSize>
-        <Results>
-          <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2988719307" type="ConversationPost" />
-        </Results>
-      </QueryResult>
+        <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/4716419794" refObjectName="Testing" type="Defect" />
+      </CreateResult>
       
     http_version: "1.1"
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/conversationpost/2988719307
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/4716419794
     body: 
     headers: 
       x-rallyintegrationname: 
@@ -158,17 +153,17 @@
       message: OK
     headers: 
       date: 
-      - Mon, 14 Nov 2011 21:51:39 GMT
+      - Fri, 11 Nov 2011 02:48:26 GMT
       server: 
       - Jetty(6.1.26)
       expires: 
       - Thu, 01-Jan-1970 00:00:00 GMT
       rallyrequestid: 
-      - qd-app-02-trial1lpf5c4fq1yrzj5jyqpe5x9x9.qd-app-02-trial4496777
+      - qd-app-02-trial1ac0pu4d8uxsl8kuw33t7q5n1.qd-app-02-trial35550
       content-type: 
       - text/xml;  charset=utf-8
       set-cookie: 
-      - JSESSIONID=qd-app-02-trial1lpf5c4fq1yrzj5jyqpe5x9x9.qd-app-02-trial;Path=/slm;Secure
+      - JSESSIONID=qd-app-02-trial1ac0pu4d8uxsl8kuw33t7q5n1.qd-app-02-trial;Path=/slm;Secure
       vary: 
       - Accept-Encoding
       p3p: 
@@ -179,15 +174,36 @@
       - chunked
     body: |+
       <?xml version="1.0" encoding="UTF-8"?>
-      <ConversationPost rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/conversationpost/2988719307" objectVersion="1" CreatedAt="Mar 5">
-        <CreationDate>2011-03-05T17:37:54.268Z</CreationDate>
-        <ObjectID>2988719307</ObjectID>
+      <Defect rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/4716419794" objectVersion="1" refObjectName="Testing" CreatedAt="just now">
+        <CreationDate>2011-11-11T02:48:25.435Z</CreationDate>
+        <ObjectID>4716419794</ObjectID>
         <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
         <Workspace rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspace/2712835610" refObjectName="Workspace 1" type="Workspace" />
-        <Artifact rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/defect/2780205298" refObjectName="Safari email alert has wrong subject" type="Defect" />
-        <PostNumber>1</PostNumber>
-        <Text>Hmm, I like the idea, but the grammatical structure is strange. How about, &lt;b&gt;"Our awesome safari exposes you to lions, zebras and elephants!"&lt;/b&gt;</Text>
-        <UserName>sfw@simeonfosterwillbanks.com</UserName>
-      </ConversationPost>
+        <Description>Here we go</Description>
+        <Discussion />
+        <FormattedID>DE38</FormattedID>
+        <LastUpdateDate>2011-11-11T02:48:25.538Z</LastUpdateDate>
+        <Name>Testing</Name>
+        <Notes />
+        <Project rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688" refObjectName="Sample Project" type="Project" />
+        <RevisionHistory rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/revisionhistory/4716419795" type="RevisionHistory" />
+        <Tags />
+        <AffectsDoc>false</AffectsDoc>
+        <Attachments />
+        <Blocked>false</Blocked>
+        <Duplicates />
+        <Environment>None</Environment>
+        <Priority>None</Priority>
+        <Rank>372.530</Rank>
+        <ReleaseNote>false</ReleaseNote>
+        <Resolution>None</Resolution>
+        <ScheduleState>Defined</ScheduleState>
+        <Severity>None</Severity>
+        <State>Submitted</State>
+        <TaskActualTotal>0.0</TaskActualTotal>
+        <TaskEstimateTotal>0.0</TaskEstimateTotal>
+        <TaskRemainingTotal>0.0</TaskRemainingTotal>
+        <Tasks />
+      </Defect>
       
     http_version: "1.1"

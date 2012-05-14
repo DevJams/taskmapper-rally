@@ -2,7 +2,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :post
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2780205298
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2780205298
     body: <?xml version="1.0" encoding="UTF-8"?><Defect ref="https://community.rallydev.com/slm/webservice/1.17/defect/2780205298"><Description>A brand new awesome description</Description><Name>Safari email alert has wrong subject</Name><ScheduleState>Defined</ScheduleState><State>Closed</State><SubmittedBy>sfw@simeonfosterwillbanks.com</SubmittedBy></Defect>
     headers: 
       x-rallyintegrationname: 
@@ -103,7 +103,7 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: https://ticketmaster-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2780205298
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/1.17/defect/2780205298
     body: 
     headers: 
       x-rallyintegrationname: 

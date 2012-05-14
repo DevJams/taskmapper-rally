@@ -6,11 +6,10 @@ describe "TaskMapper::Provider::Rally" do
     @auth = {:url => 'https://community.rallydev.com/slm', 
              :username => 'taskmapper-rally@simeonfosterwillbanks.com', 
              :password => 'Password'}
-    VCR.use_cassette('taskmapper_call') { @taskmapper = TaskMapper.new(:rally, @auth) }
+    VCR.use_cassette('rally') { @taskmapper = TaskMapper.new(:rally, @auth) }
   end
 
   it "should be able to instantiate a new instance directly" do
-    VCR.use_cassette('taskmapper_call') { @taskmapper = TaskMapper::Provider::Rally.new(@auth) }
     @taskmapper.should be_an_instance_of(TaskMapper)
     @taskmapper.should be_a_kind_of(TaskMapper::Provider::Rally)
   end
