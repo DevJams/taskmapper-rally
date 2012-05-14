@@ -1,23 +1,23 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe "Ticketmaster::Provider::Rally::Comment" do
+describe TaskMapper::Provider::Rally::Comment do
   before(:all) do 
     @project_id = 2712835688
     @ticket_id = 2780205298
     @comment_id = 2988719307
     @comment_author = "sfw@simeonfosterwillbanks.com"
-    VCR.use_cassette('ticketmaster_setting') do 
-      @ticketmaster = TicketMaster.new(:rally, {:url => 'https://community.rallydev.com/slm', 
-                                       :username => 'ticketmaster-rally@simeonfosterwillbanks.com', 
+    VCR.use_cassette('taskmapper_setting') do 
+      @taskmapper = TaskMapper.new(:rally, {:url => 'https://community.rallydev.com/slm', 
+                                       :username => 'taskmapper-rally@simeonfosterwillbanks.com', 
                                        :password => 'Password'})
 
-      @project = @ticketmaster.project(@project_id) 
+      @project = @taskmapper.project(@project_id) 
       @ticket = @project.ticket(:id => @ticket_id) 
     end
   end
 
   before(:each) do
-    @klass = TicketMaster::Provider::Rally::Comment
+    @klass = TaskMapper::Provider::Rally::Comment
   end
 
   it "should be able to load all comments" do

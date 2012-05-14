@@ -6,7 +6,7 @@ source "http://rubygems.org"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 
-gem "ticketmaster", "0.6.10"
+gem "taskmapper", "~> 0.8"
 gem "rally_rest_api", "~> 1.0"
 
 group :development do

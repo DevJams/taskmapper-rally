@@ -1,6 +1,6 @@
-module TicketMaster::Provider
+module TaskMapper::Provider
   module Rally
-    # The comment class for ticketmaster-rally
+    # The comment class for taskmapper-rally
     #
     # Remaps 
     #
@@ -9,7 +9,7 @@ module TicketMaster::Provider
     # body => text
     # created_at => creation_date
     # updated_at => creation_date    
-    class Comment < TicketMaster::Provider::Base::Comment
+    class Comment < TaskMapper::Provider::Base::Comment
       
       def initialize(*object)
         if object.first
@@ -44,7 +44,7 @@ module TicketMaster::Provider
       # However, it does not alias Bignum
       # If a ID is a Bignum, the API will throw undefined method
       # Because of this, we pass all IDs to API as strings
-      # Ticketmaster specs set IDs as integers, so coerce type on get 
+      # taskmapper specs set IDs as integers, so coerce type on get 
       def id
         self[:oid].to_i
       end
@@ -57,7 +57,7 @@ module TicketMaster::Provider
         project = self.rally_project(project_id)
         # Rally Ruby REST API expects IDs as strings
         # For id.to_s see note on Project::id
-        query_result = TicketMaster::Provider::Rally.rally.find(:conversation_post, :fetch => false, :project => project) { equal :object_i_d, id.to_s }
+        query_result = TaskMapper::Provider::Rally.rally.find(:conversation_post, :fetch => false, :project => project) { equal :object_i_d, id.to_s }
         self.new query_result.first, project_id
       end
 
@@ -72,7 +72,7 @@ module TicketMaster::Provider
       def self.search(project_id, ticket_id, options = {}, limit = 1000)
         project = self.rally_project(project_id)
         artifact = project.ticket(:id => ticket_id.to_s)
-        query_result = TicketMaster::Provider::Rally.rally.find_all(:conversation_post, :project => project) { equal :artifact, artifact }
+        query_result = TaskMapper::Provider::Rally.rally.find_all(:conversation_post, :project => project) { equal :artifact, artifact }
         comments = query_result.collect do |comment| 
           self.new comment, project_id, ticket_id
         end
@@ -88,15 +88,15 @@ module TicketMaster::Provider
           :artifact => ticket.system_data[:client],
           :text => options[:body]
         }
-        new_comment = TicketMaster::Provider::Rally.rally.create(:conversation_post, comment)
+        new_comment = TaskMapper::Provider::Rally.rally.create(:conversation_post, comment)
         self.new new_comment
       end
       
       private
       
         def self.rally_project(project_id)
-          ticketmaster_project = provider_parent(self)::Project.find_by_id(project_id)
-          ticketmaster_project.system_data[:client]
+          taskmapper_project = provider_parent(self)::Project.find_by_id(project_id)
+          taskmapper_project.system_data[:client]
         end
               
         def self.to_rally_object(hash)

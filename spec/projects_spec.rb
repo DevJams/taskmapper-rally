@@ -1,14 +1,14 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe "Ticketmaster::Provider::Rally::Project" do
+describe TaskMapper::Provider::Rally::Project do
 
   before(:all) do 
     VCR.use_cassette('rally') do 
-      @ticketmaster = TicketMaster.new(:rally, {:url => 'https://community.rallydev.com/slm', 
-                                       :username => 'ticketmaster-rally@simeonfosterwillbanks.com', 
+      @taskmapper = taskmapper.new(:rally, {:url => 'https://community.rallydev.com/slm', 
+                                       :username => 'taskmapper-rally@simeonfosterwillbanks.com', 
                                        :password => 'Password'})
     end
-    @klass = TicketMaster::Provider::Rally::Project
+    @klass = taskmapper::Provider::Rally::Project
   end
 
   before(:each) do
@@ -19,13 +19,13 @@ describe "Ticketmaster::Provider::Rally::Project" do
 
   it "should be able to load all projects" do
     VCR.use_cassette('rally_projects') do 
-      @ticketmaster.projects.should be_an_instance_of(Array)
-      @ticketmaster.projects.first.should be_an_instance_of(@klass)
+      @taskmapper.projects.should be_an_instance_of(Array)
+      @taskmapper.projects.first.should be_an_instance_of(@klass)
     end
   end
 
   it "should be able to find a project by id" do
-    VCR.use_cassette('rally_by_id') { @project = @ticketmaster.project(@project_id) }
+    VCR.use_cassette('rally_by_id') { @project = @taskmapper.project(@project_id) }
     @project.should be_an_instance_of(@klass)
     @project.name.should == @project_name
     @project.id.should == @project_id
@@ -33,7 +33,7 @@ describe "Ticketmaster::Provider::Rally::Project" do
   end
 
   it "should be able to load all projects from an array of ids" do 
-    VCR.use_cassette('rally_projects_by_ids') { @projects = @ticketmaster.projects([@project_id]) }
+    VCR.use_cassette('rally_projects_by_ids') { @projects = @taskmapper.projects([@project_id]) }
     @projects.should be_an_instance_of(Array)
     @projects.first.should be_an_instance_of(@klass)    
     @projects.first.name.should == @project_name
@@ -42,7 +42,7 @@ describe "Ticketmaster::Provider::Rally::Project" do
   end
 
   it "should be able to load all projects from attributes" do 
-    VCR.use_cassette('rally_projects_by_attributes') { @projects = @ticketmaster.projects(:name => @project_name)}
+    VCR.use_cassette('rally_projects_by_attributes') { @projects = @taskmapper.projects(:name => @project_name)}
     @projects.should be_an_instance_of(Array)
     @projects.first.should be_an_instance_of(@klass)
     @projects.first.name.should == @project_name
@@ -52,8 +52,8 @@ describe "Ticketmaster::Provider::Rally::Project" do
 
   it "should be able to load projects using the find method" do
     VCR.use_cassette('rally_project_return_class') do 
-      @ticketmaster.project.should == @klass
-      @ticketmaster.project.find(@project_id).should be_an_instance_of(@klass)
+      @taskmapper.project.should == @klass
+      @taskmapper.project.find(@project_id).should be_an_instance_of(@klass)
     end
   end
 

@@ -1,0 +1,75 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/user
+    body: 
+    headers: 
+      x-rallyintegrationplatform: 
+      - Ruby 1.8.7
+      x-rallyintegrationname: 
+      - RubyRestAPI
+      content-type: 
+      - text/xml
+      authorization: 
+      - Basic dGFza21hcHBlci1yYWxseUBzaW1lb25mb3N0ZXJ3aWxsYmFua3MuY29tOlBhc3N3b3Jk
+      x-rallyintegrationos: 
+      - i686-linux
+      x-rallyintegrationlibrary: 
+      - RallyRestAPI version 1.0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 401
+      message: The username or password you entered is incorrect.
+    headers: 
+      p3p: 
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+      expires: 
+      - Mon, 14 May 2012 15:15:44 GMT
+      content-type: 
+      - text/html; charset=iso-8859-1
+      www-authenticate: 
+      - Basic realm="Rally ALM"
+      date: 
+      - Mon, 14 May 2012 15:15:44 GMT
+      content-length: 
+      - "1474"
+      set-cookie: 
+      - JSESSIONID=qd-app-02-trialj7ky84gd0l4w1n13e8vtrshis.qd-app-02-trial;Path=/;Secure
+      vary: 
+      - Accept-Encoding
+      cache-control: 
+      - no-cache,no-store,max-age=0,must-revalidate
+    body: |
+      <html>
+      <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+      <title>Error 401 The username or password you entered is incorrect.</title>
+      </head>
+      <body><h2>HTTP ERROR 401</h2>
+      <p>Problem accessing /slm/webservice/current/user. Reason:
+      <pre>    The username or password you entered is incorrect.</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      <br/>                                                
+      
+      </body>
+      </html>
+
+    http_version: "1.1"

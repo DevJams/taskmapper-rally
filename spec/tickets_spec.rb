@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe "Ticketmaster::Provider::Rally::Ticket" do
+describe TaskMapper::Provider::Rally::Ticket do
   before(:all) do 
     @project_name = "Sample Project"
     @project_id = 2712835688
@@ -12,16 +12,16 @@ describe "Ticketmaster::Provider::Rally::Ticket" do
     @ticket_status = "Submitted"
     @ticket_created_at = "Sat Jan 29 19:35:56 UTC 2011"
     VCR.use_cassette('rally_tickets') do 
-      @ticketmaster = TicketMaster.new(:rally, {:url => 'https://community.rallydev.com/slm', 
-                                       :username => 'ticketmaster-rally@simeonfosterwillbanks.com', 
+      @taskmapper = TaskMapper.new(:rally, {:url => 'https://community.rallydev.com/slm', 
+                                       :username => 'taskmapper-rally@simeonfosterwillbanks.com', 
                                        :password => 'Password'})
-      @project = @ticketmaster.project(@project_id)
+      @project = @taskmapper.project(@project_id)
     end
 
   end
 
   before(:each) do
-    @klass = TicketMaster::Provider::Rally::Ticket
+    @klass = TaskMapper::Provider::Rally::Ticket
   end
 
   it "should return the ticket class" do

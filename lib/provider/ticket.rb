@@ -1,6 +1,6 @@
-module TicketMaster::Provider
+module TaskMapper::Provider
   module Rally
-    # Ticket class for ticketmaster-rally
+    # Ticket class for taskmapper-rally
     #
     # Remaps 
     #
@@ -12,7 +12,7 @@ module TicketMaster::Provider
     # created_at => creation_date
     # updated_at => last_update_date    
     # assignee => owner    
-    class Ticket < TicketMaster::Provider::Base::Ticket
+    class Ticket < TaskMapper::Provider::Base::Ticket
 
       def initialize(*object)
         if object.first
@@ -61,7 +61,7 @@ module TicketMaster::Provider
       # However, it does not alias Bignum
       # If a ID is a Bignum, the API will throw undefined method
       # Because of this, we pass all IDs to API as strings
-      # Ticketmaster specs set IDs as integers, so coerce type on get 
+      # taskmapper specs set IDs as integers, so coerce type on get 
       def id
         self[:oid].to_i
       end
@@ -78,7 +78,7 @@ module TicketMaster::Provider
         project = self.rally_project(project_id)
         # Rally Ruby REST API expects IDs as strings
         # For id.to_s see note on Project::id
-        query_result = TicketMaster::Provider::Rally.rally.find(:artifact, :fetch => true, :project => project) { equal :object_i_d, id.to_s }
+        query_result = TaskMapper::Provider::Rally.rally.find(:artifact, :fetch => true, :project => project) { equal :object_i_d, id.to_s }
         self.new query_result.first, project_id
       end
 
@@ -93,9 +93,9 @@ module TicketMaster::Provider
       def self.search(project_id, options = {}, limit = 1000)
         project = self.rally_project(project_id)
         search_type = options.delete(:type_as_symbol) || :artifact
-        # Convert Ticketmaster hash keys to Rally hash keys for Rally query params
+        # Convert taskmapper hash keys to Rally hash keys for Rally query params
         query_parameters = self.to_rally_query_parameters(options) 
-        query_result = TicketMaster::Provider::Rally.rally.find_all(search_type, :project => project){ 
+        query_result = TaskMapper::Provider::Rally.rally.find_all(search_type, :project => project){ 
           query_parameters.each do |key, value|
             equal key, value
           end
@@ -113,7 +113,7 @@ module TicketMaster::Provider
         ticket[:project] = project
         # Not sure about making the defect the default here, thoughts?
         new_type = options[:type_as_symbol] || :defect
-        new_ticket = TicketMaster::Provider::Rally.rally.create(new_type, ticket)
+        new_ticket = TaskMapper::Provider::Rally.rally.create(new_type, ticket)
         self.new new_ticket
       end
       
@@ -123,7 +123,7 @@ module TicketMaster::Provider
         else
           ticket = self.class.to_rally_object(self)
           ticket_updated = @system_data[:client].update(ticket)
-          # Update Ticketmaster Ticket object updated_at attribute
+          # Update taskmapper Ticket object updated_at attribute
           self.updated_at = ticket_updated.last_update_date
         end
       end
@@ -131,8 +131,8 @@ module TicketMaster::Provider
       private
       
         def self.rally_project(project_id)
-          ticketmaster_project = provider_parent(self)::Project.find_by_id(project_id)
-          ticketmaster_project.system_data[:client]
+          taskmapper_project = provider_parent(self)::Project.find_by_id(project_id)
+          taskmapper_project.system_data[:client]
         end
         
         def self.to_rally_object(hash)
