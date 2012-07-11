@@ -2,29 +2,37 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe TaskMapper::Provider::Rally::Project do
 
-  before(:all) do 
+  let(:tm) do 
     VCR.use_cassette('rally') do 
-      @taskmapper = TaskMapper.new(:rally, {:url => 'https://rally1.rallydev.com/slm', 
-                                       :username => 'rafael@hybridgroup.com', 
-                                       :password => 'admin123456'})
+      TaskMapper.new(:rally, {:url => 'https://rally1.rallydev.com/slm', :username => 'rafael@hybridgroup.com', :password => 'admin123456'}) 
     end
-    @klass = TaskMapper::Provider::Rally::Project
   end
+  let(:project_class) { TaskMapper::Provider::Rally::Project }
+  let(:project_name) { 'Sample Project' }
+  let(:project_id) { 1 }
 
-  before(:each) do
-    @project_name = "Sample Project"
-    @project_id = 2712835688
-    @project_created_at = "Tue Jan 18 15:40:28 UTC 2011"
-  end
+  describe "Retrieving projects" do 
+    context "when #projects" do 
+      subject do 
+        VCR.use_cassette('rally_projects') do 
+          tm.projects 
+        end
+      end 
+      it { should be_an_instance_of Array }
 
-  it "should be able to load all projects" do
-    VCR.use_cassette('rally_projects') do 
-      @taskmapper.projects.should be_an_instance_of(Array)
-      @taskmapper.projects.first.should be_an_instance_of(@klass)
+      context "when #projects.first" do 
+        subject do
+          VCR.use_cassette('rally_projects') do 
+            tm.projects.first
+          end
+        end 
+        it { should be_an_instance_of project_class }
+      end
     end
   end
 
   it "should be able to find a project by id" do
+    pending
     VCR.use_cassette('rally_by_id') { @project = @taskmapper.project(@project_id) }
     @project.should be_an_instance_of(@klass)
     @project.name.should == @project_name
@@ -33,6 +41,7 @@ describe TaskMapper::Provider::Rally::Project do
   end
 
   it "should be able to load all projects from an array of ids" do 
+    pending
     VCR.use_cassette('rally_projects_by_ids') { @projects = @taskmapper.projects([@project_id]) }
     @projects.should be_an_instance_of(Array)
     @projects.first.should be_an_instance_of(@klass)    
@@ -42,6 +51,7 @@ describe TaskMapper::Provider::Rally::Project do
   end
 
   it "should be able to load all projects from attributes" do 
+    pending
     VCR.use_cassette('rally_projects_by_attributes') { @projects = @taskmapper.projects(:name => @project_name)}
     @projects.should be_an_instance_of(Array)
     @projects.first.should be_an_instance_of(@klass)
@@ -51,10 +61,10 @@ describe TaskMapper::Provider::Rally::Project do
   end
 
   it "should be able to load projects using the find method" do
+    pending
     VCR.use_cassette('rally_project_return_class') do 
       @taskmapper.project.should == @klass
       @taskmapper.project.find(@project_id).should be_an_instance_of(@klass)
     end
   end
-
 end
