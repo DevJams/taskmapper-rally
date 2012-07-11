@@ -1,79 +1,56 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
-    body: 
-    headers: 
-      x-rallyintegrationname: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rafael%40hybridgroup.com:admin123456@rally1.rallydev.com/slm/webservice/current/Project?query=(ObjectID%20=%202712835688)&fetch=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      x-rallyintegrationname:
       - RubyRestAPI
-      x-rallyintegrationlibrary: 
+      x-rallyintegrationlibrary:
       - RallyRestAPI version 1.0.3
-      x-rallyintegrationplatform: 
+      x-rallyintegrationplatform:
       - Ruby 1.9.2
-      x-rallyintegrationos: 
+      x-rallyintegrationos:
       - i686-linux
-      authorization: 
-      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
-      content-type: 
+      authorization:
+      - Basic cmFmYWVsQGh5YnJpZGdyb3VwLmNvbTphZG1pbjEyMzQ1Ng==
+      content-type:
       - text/xml
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Fri, 11 Nov 2011 02:35:55 GMT
-      server: 
-      - Jetty(6.1.26)
-      expires: 
+    headers:
+      date:
+      - Wed, 11 Jul 2012 23:45:55 GMT
+      expires:
       - Thu, 01-Jan-1970 00:00:00 GMT
-      rallyrequestid: 
-      - qd-app-02-trial1myt18wswnfgx16sczoaym9qyz.qd-app-02-trial20485
-      content-type: 
+      rallyrequestid:
+      - qs-app-04qdyotf5sx3hs7wmnloyisdiy.qs-app-0473603295
+      content-type:
       - text/xml;  charset=utf-8
-      set-cookie: 
-      - JSESSIONID=qd-app-02-trial1myt18wswnfgx16sczoaym9qyz.qd-app-02-trial;Path=/slm;Secure
-      vary: 
+      set-cookie:
+      - JSESSIONID=qs-app-04qdyotf5sx3hs7wmnloyisdiy.qs-app-04;Path=/;Secure;HttpOnly
+      vary:
       - Accept-Encoding
-      p3p: 
+      p3p:
       - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
-      cache-control: 
-      - no-cache, private,max-age=0,must-revalidate
-      transfer-encoding: 
+      cache-control:
+      - no-cache,no-store,max-age=0,must-revalidate
+      transfer-encoding:
       - chunked
-    body: |+
-      <?xml version="1.0" encoding="UTF-8"?>
-      <QueryResult rallyAPIMajor="1" rallyAPIMinor="17">
-        <Errors />
-        <Warnings />
-        <TotalResultCount>1</TotalResultCount>
-        <StartIndex>1</StartIndex>
-        <PageSize>20</PageSize>
-        <Results>
-          <Object rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/project/2712835688" objectVersion="1" refObjectName="Sample Project" CreatedAt="Jan 18" type="Project">
-            <CreationDate>2011-01-18T15:40:28.807Z</CreationDate>
-            <ObjectID>2712835688</ObjectID>
-            <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
-            <Workspace rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspace/2712835610" refObjectName="Workspace 1" type="Workspace" />
-            <BuildDefinitions>
-              <BuildDefinition rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/builddefinition/2712835693" refObjectName="Default Build Definition" type="BuildDefinition" />
-            </BuildDefinitions>
-            <Children />
-            <Description />
-            <Iterations>
-              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836040" refObjectName="1 - Browse and Book" type="Iteration" />
-              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836046" refObjectName="3 - After Safari" type="Iteration" />
-              <Iteration rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/iteration/2712836043" refObjectName="2 - Streamline Operations" type="Iteration" />
-            </Iterations>
-            <Name>Sample Project</Name>
-            <Notes />
-            <Owner>sfw@simeonfosterwillbanks.com</Owner>
-            <Releases />
-            <State>Open</State>
-            <Users />
-          </Object>
-        </Results>
-      </QueryResult>
-      
-    http_version: "1.1"
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<QueryResult rallyAPIMajor=\"1\"
+        rallyAPIMinor=\"17\">\n  <Errors />\n  <Warnings />\n  <TotalResultCount>0</TotalResultCount>\n
+        \ <StartIndex>1</StartIndex>\n  <PageSize>20</PageSize>\n  <Results />\n</QueryResult>\n\n"
+    http_version: '1.1'
+  recorded_at: Wed, 11 Jul 2012 23:49:03 GMT
+recorded_with: VCR 2.2.3

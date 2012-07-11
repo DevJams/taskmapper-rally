@@ -1,64 +1,198 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/user
-    body: 
-    headers: 
-      x-rallyintegrationname: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com/slm/webservice/current/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      x-rallyintegrationname:
       - RubyRestAPI
-      x-rallyintegrationlibrary: 
+      x-rallyintegrationlibrary:
       - RallyRestAPI version 1.0.3
-      x-rallyintegrationplatform: 
+      x-rallyintegrationplatform:
       - Ruby 1.9.2
-      x-rallyintegrationos: 
+      x-rallyintegrationos:
       - i686-linux
-      authorization: 
-      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
-      content-type: 
+      authorization:
+      - Basic dGFza21hcHBlci1yYWxseUBzaW1lb25mb3N0ZXJ3aWxsYmFua3MuY29tOlBhc3N3b3Jk
+      content-type:
       - text/xml
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response:
+    status:
+      code: 401
+      message: The username or password you entered is incorrect.
+    headers:
+      date:
+      - Wed, 11 Jul 2012 23:35:43 GMT
+      www-authenticate:
+      - Basic realm="Rally ALM"
+      content-type:
+      - text/html; charset=iso-8859-1
+      cache-control:
+      - no-cache,no-store,max-age=0,must-revalidate
+      content-length:
+      - '1474'
+      set-cookie:
+      - JSESSIONID=qs-app-03-trial18l9brcalc57a74us4bkfzop.qs-app-03-trial;Path=/;Secure;HttpOnly
+      expires:
+      - Wed, 11 Jul 2012 23:35:43 GMT
+      vary:
+      - Accept-Encoding
+      p3p:
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+    body:
+      encoding: US-ASCII
+      string: ! "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=ISO-8859-1\"/>\n<title>Error 401 The username or password you entered
+        is incorrect.</title>\n</head>\n<body><h2>HTTP ERROR 401</h2>\n<p>Problem
+        accessing /slm/webservice/current/user. Reason:\n<pre>    The username or
+        password you entered is incorrect.</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n\n</body>\n</html>\n"
+    http_version: '1.1'
+  recorded_at: Wed, 11 Jul 2012 23:38:51 GMT
+- request:
+    method: get
+    uri: https://rafael%40hybridgroup.com:admin123456@community.rallydev.com/slm/webservice/current/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      x-rallyintegrationname:
+      - RubyRestAPI
+      x-rallyintegrationlibrary:
+      - RallyRestAPI version 1.0.3
+      x-rallyintegrationplatform:
+      - Ruby 1.9.2
+      x-rallyintegrationos:
+      - i686-linux
+      authorization:
+      - Basic cmFmYWVsQGh5YnJpZGdyb3VwLmNvbTphZG1pbjEyMzQ1Ng==
+      content-type:
+      - text/xml
+  response:
+    status:
+      code: 401
+      message: The username or password you entered is incorrect.
+    headers:
+      date:
+      - Wed, 11 Jul 2012 23:44:37 GMT
+      www-authenticate:
+      - Basic realm="Rally ALM"
+      content-type:
+      - text/html; charset=iso-8859-1
+      cache-control:
+      - no-cache,no-store,max-age=0,must-revalidate
+      content-length:
+      - '1474'
+      set-cookie:
+      - JSESSIONID=qs-app-01-trial1go6ccy5pq5w81ea32m2ppf54j.qs-app-01-trial;Path=/;Secure;HttpOnly
+      expires:
+      - Wed, 11 Jul 2012 23:44:37 GMT
+      vary:
+      - Accept-Encoding
+      p3p:
+      - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
+    body:
+      encoding: US-ASCII
+      string: ! "<html>\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html;
+        charset=ISO-8859-1\"/>\n<title>Error 401 The username or password you entered
+        is incorrect.</title>\n</head>\n<body><h2>HTTP ERROR 401</h2>\n<p>Problem
+        accessing /slm/webservice/current/user. Reason:\n<pre>    The username or
+        password you entered is incorrect.</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n<br/>
+        \                                               \n<br/>                                                \n\n</body>\n</html>\n"
+    http_version: '1.1'
+  recorded_at: Wed, 11 Jul 2012 23:47:45 GMT
+- request:
+    method: get
+    uri: https://rafael%40hybridgroup.com:admin123456@rally1.rallydev.com/slm/webservice/current/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      x-rallyintegrationname:
+      - RubyRestAPI
+      x-rallyintegrationlibrary:
+      - RallyRestAPI version 1.0.3
+      x-rallyintegrationplatform:
+      - Ruby 1.9.2
+      x-rallyintegrationos:
+      - i686-linux
+      authorization:
+      - Basic cmFmYWVsQGh5YnJpZGdyb3VwLmNvbTphZG1pbjEyMzQ1Ng==
+      content-type:
+      - text/xml
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      date: 
-      - Thu, 10 Nov 2011 22:15:10 GMT
-      server: 
-      - Jetty(6.1.26)
-      expires: 
+    headers:
+      date:
+      - Wed, 11 Jul 2012 23:45:47 GMT
+      expires:
       - Thu, 01-Jan-1970 00:00:00 GMT
-      rallyrequestid: 
-      - qd-app-03-trial6jrr0sm03palgi3hksouc6zx.qd-app-03-trial1785108
-      content-type: 
+      rallyrequestid:
+      - qs-app-01pu136flnr7hs13g3xlzlpqk3k.qs-app-0173213594
+      content-type:
       - text/xml;  charset=utf-8
-      set-cookie: 
-      - JSESSIONID=qd-app-03-trial6jrr0sm03palgi3hksouc6zx.qd-app-03-trial;Path=/slm;Secure
-      vary: 
+      set-cookie:
+      - JSESSIONID=qs-app-01pu136flnr7hs13g3xlzlpqk3k.qs-app-01;Path=/;Secure;HttpOnly
+      vary:
       - Accept-Encoding
-      p3p: 
+      p3p:
       - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
-      cache-control: 
-      - no-cache, private,max-age=0,must-revalidate
-      transfer-encoding: 
+      cache-control:
+      - no-cache,no-store,max-age=0,must-revalidate
+      transfer-encoding:
       - chunked
-    body: |+
-      <?xml version="1.0" encoding="UTF-8"?>
-      <User rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/user/2719713649" objectVersion="4" refObjectName="taskmapper-rally" CreatedAt="Jan 19">
-        <CreationDate>2011-01-19T16:56:34.602Z</CreationDate>
-        <ObjectID>2719713649</ObjectID>
-        <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
-        <Disabled>false</Disabled>
-        <EmailAddress>taskmapper-rally@simeonfosterwillbanks.com</EmailAddress>
-        <LastPasswordUpdateDate>2011-01-19T17:32:11.941Z</LastPasswordUpdateDate>
-        <RevisionHistory rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/revisionhistory/2719713650" type="RevisionHistory" />
-        <Projects />
-        <LoginName>taskmapper-rally@simeonfosterwillbanks.com</LoginName>
-        <UserPermissions>
-          <WorkspacePermission rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspacepermission/2719713649u2712835610w3" refObjectName="Workspace 1 User" type="WorkspacePermission" />
-          <ProjectPermission rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/projectpermission/2719713649u2712835688p2" refObjectName="Sample Project Editor" type="ProjectPermission" />
-        </UserPermissions>
-        <UserProfile rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/userprofile/2719713651" type="UserProfile" />
-      </User>
-      
-    http_version: "1.1"
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<User rallyAPIMajor=\"1\"
+        rallyAPIMinor=\"17\" ref=\"https://rally1.rallydev.com/slm/webservice/1.17/user/7092185649\"
+        objectVersion=\"4\" refObjectName=\"rafael\" CreatedAt=\"today at 4:43 pm\">\n
+        \ <CreationDate>2012-07-11T22:43:35.341Z</CreationDate>\n  <ObjectID>7092185649</ObjectID>\n
+        \ <Subscription rallyAPIMajor=\"1\" rallyAPIMinor=\"17\" ref=\"https://rally1.rallydev.com/slm/webservice/1.17/subscription/7092185647\"
+        refObjectName=\"Community (HS_1) Edition - Hybrid - rafael@hybridgroup.com\"
+        type=\"Subscription\" />\n  <Disabled>false</Disabled>\n  <EmailAddress>rafael@hybridgroup.com</EmailAddress>\n
+        \ <LastPasswordUpdateDate>2012-07-11T23:40:33.102Z</LastPasswordUpdateDate>\n
+        \ <RevisionHistory rallyAPIMajor=\"1\" rallyAPIMinor=\"17\" ref=\"https://rally1.rallydev.com/slm/webservice/1.17/revisionhistory/7092185650\"
+        type=\"RevisionHistory\" />\n  <Role>CONTRIBUTOR</Role>\n  <Projects>\n    <Project
+        rallyAPIMajor=\"1\" rallyAPIMinor=\"17\" ref=\"https://rally1.rallydev.com/slm/webservice/1.17/project/7092185746\"
+        refObjectName=\"Sample Project\" type=\"Project\" />\n  </Projects>\n  <LoginName>rafael@hybridgroup.com</LoginName>\n
+        \ <UserPermissions />\n  <UserProfile rallyAPIMajor=\"1\" rallyAPIMinor=\"17\"
+        ref=\"https://rally1.rallydev.com/slm/webservice/1.17/userprofile/7092185651\"
+        type=\"UserProfile\" />\n</User>\n\n"
+    http_version: '1.1'
+  recorded_at: Wed, 11 Jul 2012 23:48:55 GMT
+recorded_with: VCR 2.2.3
