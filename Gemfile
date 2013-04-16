@@ -6,15 +6,15 @@ source "http://rubygems.org"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 
-gem "taskmapper", "~> 0.8"
+gem "taskmapper"
 gem "rally_rest_api", "~> 1.0"
 
-group :development do
-  gem "rspec", "~> 2.3"
-  gem "yard", "~> 0.7"
+group :development,:test do
+  gem "rspec"
+  gem "yard"
   gem "jeweler", "~> 1.5"
-  gem "fakeweb", "~> 1.3"
-  gem "vcr", "~> 1.11" 
+  gem "webmock"
+  gem "vcr"
   gem 'ruby-debug', :platform => [:ruby_18]
   gem 'ruby-debug19', :platform => [:ruby_19]
 end

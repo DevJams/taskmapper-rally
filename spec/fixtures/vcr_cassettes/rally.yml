@@ -1,64 +1,65 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com:443/slm/webservice/current/user
-    body: 
-    headers: 
-      x-rallyintegrationname: 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://taskmapper-rally%40simeonfosterwillbanks.com:Password@community.rallydev.com/slm/webservice/1.36/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      x-rallyintegrationname:
       - RubyRestAPI
-      x-rallyintegrationlibrary: 
-      - RallyRestAPI version 1.0.3
-      x-rallyintegrationplatform: 
+      x-rallyintegrationlibrary:
+      - RallyRestAPI version 1.0.6
+      x-rallyintegrationplatform:
       - Ruby 1.9.2
-      x-rallyintegrationos: 
-      - i686-linux
-      authorization: 
-      - Basic dGlja2V0bWFzdGVyLXJhbGx5QHNpbWVvbmZvc3RlcndpbGxiYW5rcy5jb206UGFzc3dvcmQ=
-      content-type: 
+      x-rallyintegrationos:
+      - x86_64-linux
+      authorization:
+      - Basic dGFza21hcHBlci1yYWxseUBzaW1lb25mb3N0ZXJ3aWxsYmFua3MuY29tOlBhc3N3b3Jk
+      content-type:
       - text/xml
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      date: 
-      - Thu, 10 Nov 2011 22:15:10 GMT
-      server: 
-      - Jetty(6.1.26)
-      expires: 
-      - Thu, 01-Jan-1970 00:00:00 GMT
-      rallyrequestid: 
-      - qd-app-03-trial6jrr0sm03palgi3hksouc6zx.qd-app-03-trial1785108
-      content-type: 
-      - text/xml;  charset=utf-8
-      set-cookie: 
-      - JSESSIONID=qd-app-03-trial6jrr0sm03palgi3hksouc6zx.qd-app-03-trial;Path=/slm;Secure
-      vary: 
-      - Accept-Encoding
-      p3p: 
+      accept-encoding:
+      - gzip, deflate
+  response:
+    status:
+      code: 401
+      message: The username or password you entered is incorrect.
+    headers:
+      date:
+      - Tue, 16 Apr 2013 17:36:27 GMT
+      www-authenticate:
+      - Basic realm="Rally ALM"
+      content-type:
+      - text/html;charset=ISO-8859-1
+      cache-control:
+      - no-cache,no-store,max-age=0,must-revalidate
+      set-cookie:
+      - JSESSIONID=qd-app-03-trial10ye5ijphx1h69v44hjwmhff7.qd-app-03-trial;Path=/;Secure;HttpOnly
+      expires:
+      - Tue, 16 Apr 2013 17:36:27 GMT
+      vary:
+      - Accept-Encoding,User-Agent
+      content-encoding:
+      - gzip
+      p3p:
       - CP="NON DSP COR CURa PSAa PSDa OUR NOR BUS PUR COM NAV STA"
-      cache-control: 
-      - no-cache, private,max-age=0,must-revalidate
-      transfer-encoding: 
-      - chunked
-    body: |+
-      <?xml version="1.0" encoding="UTF-8"?>
-      <User rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/user/2719713649" objectVersion="4" refObjectName="taskmapper-rally" CreatedAt="Jan 19">
-        <CreationDate>2011-01-19T16:56:34.602Z</CreationDate>
-        <ObjectID>2719713649</ObjectID>
-        <Subscription rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/subscription/2712835599" refObjectName="Community Edition - Simeon Foster Willbanks - sfw@simeonfosterwillbanks.com" type="Subscription" />
-        <Disabled>false</Disabled>
-        <EmailAddress>taskmapper-rally@simeonfosterwillbanks.com</EmailAddress>
-        <LastPasswordUpdateDate>2011-01-19T17:32:11.941Z</LastPasswordUpdateDate>
-        <RevisionHistory rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/revisionhistory/2719713650" type="RevisionHistory" />
-        <Projects />
-        <LoginName>taskmapper-rally@simeonfosterwillbanks.com</LoginName>
-        <UserPermissions>
-          <WorkspacePermission rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/workspacepermission/2719713649u2712835610w3" refObjectName="Workspace 1 User" type="WorkspacePermission" />
-          <ProjectPermission rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/projectpermission/2719713649u2712835688p2" refObjectName="Sample Project Editor" type="ProjectPermission" />
-        </UserPermissions>
-        <UserProfile rallyAPIMajor="1" rallyAPIMinor="17" ref="https://community.rallydev.com/slm/webservice/1.17/userprofile/2719713651" type="UserProfile" />
-      </User>
-      
-    http_version: "1.1"
+      content-length:
+      - '290'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA+2UTU7DMBCF9z3FKPtkSPlRKa43qBKwaRVyAccZEUtJHOxJ
+        S27PJOUCsKWzsGXPfG/e6qmGu1avVEOmlqsjNtAwDyl9ju60S559z9RzWk4D
+        JWAvr13C9MU4o09gGxMi8e71/ZBuNvePaZ6gKLHjlvQ+BB/g7iaHsiEYI4Xe
+        dATyN5gYzz7UMPkRRJMC1eAiuN76EMhypvCisVL4467y9aRVs9YvZXmEfVEc
+        illb+mvpDvoYfNVSB8ZaitH1H4Cx7fBMlSw+OUuYZ7cPONvIoCATfb8VLpAG
+        qb84nFk5xVQA1MppFTvTtvroz8t4NcEbMU9bRIWXlkKZqgIuO39Tqyt1pa7U
+        f6YkCpcMnCNxye1vTc9/O78FAAA=
+    http_version: '1.1'
+  recorded_at: Tue, 16 Apr 2013 17:36:27 GMT
+recorded_with: VCR 2.4.0
