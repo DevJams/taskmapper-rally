@@ -127,7 +127,12 @@ module TaskMapper::Provider
           self.updated_at = ticket_updated.last_update_date
         end
       end
-                  
+      
+      def destroy
+        @system_data[:client].delete
+        #  client_issue.delete
+      end
+
       private
       
         def self.rally_project(project_id)
