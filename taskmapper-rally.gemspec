@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "taskmapper-rally"
-  s.version = "0.4.0"
+  s.version = "0.4.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Simeon F. Willbanks", "Rob Kaufman", "Rafael George"]
@@ -112,4 +112,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<ruby-debug19>, [">= 0"])
   end
 end
-
