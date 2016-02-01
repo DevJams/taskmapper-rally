@@ -123,8 +123,6 @@ module TaskMapper::Provider
         else
           ticket = self.class.to_rally_object(self)
           ticket_updated = @system_data[:client].update(ticket)
-          # Update taskmapper Ticket object updated_at attribute
-          self.updated_at = ticket_updated.last_update_date
         end
       end
       
