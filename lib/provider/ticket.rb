@@ -2,7 +2,7 @@ module TaskMapper::Provider
   module Rally
     # Ticket class for taskmapper-rally
     #
-    # Remaps 
+    # Remaps
     #
     # id => oid
     # title => name
@@ -10,8 +10,8 @@ module TaskMapper::Provider
     # resolution => schedule_state
     # status => state
     # created_at => creation_date
-    # updated_at => last_update_date    
-    # assignee => owner    
+    # updated_at => last_update_date
+    # assignee => owner
     class Ticket < TaskMapper::Provider::Base::Ticket
 
       def initialize(*object)
@@ -29,18 +29,19 @@ module TaskMapper::Provider
             :title => ticket.name,
             :description => ticket.description,
             :requestor => ticket.submitted_by,
-            :resolution => ticket.schedule_state, 
+            :resolution => ticket.schedule_state,
             :status => ticket.state,
+            :estimate => ticket.plan_estimate,
             :created_at => ticket.creation_date,
             :updated_at => ticket.last_update_date
           }
           # Rally optional attributes
           hash[:assignee] = ticket.owner if ticket.owner
-          # From Rally Web Services API Documentation v1.21 
-          # Allowed values for Defect.Priority:	"", 
-          #                                     "Resolve Immediately", 
-          #                                     "High Attention", 
-          #                                     "Normal", 
+          # From Rally Web Services API Documentation v1.21
+          # Allowed values for Defect.Priority:	"",
+          #                                     "Resolve Immediately",
+          #                                     "High Attention",
+          #                                     "Normal",
           #                                     "Low"
           # When "" Rally Ruby REST API returns <Priority>None</Priority>
           # Unless API returns allowed value, don't set priority
@@ -56,24 +57,24 @@ module TaskMapper::Provider
       def updated_at
         Time.parse(self[:updated_at])
       end
-      
+
       # Rally REST API aliases String and Fixnum :to_q :to_s
       # However, it does not alias Bignum
       # If a ID is a Bignum, the API will throw undefined method
       # Because of this, we pass all IDs to API as strings
-      # taskmapper specs set IDs as integers, so coerce type on get 
+      # taskmapper specs set IDs as integers, so coerce type on get
       def id
         self[:oid].to_i
       end
 
       def id=(id)
         self[:oid] = id.to_s
-      end 
-      
+      end
+
       def updated_at=(last_update_date)
         self[:updated_at] = Time.parse(last_update_date)
       end
-      
+
       def self.find_by_id(project_id, id)
         project = self.rally_project(project_id)
         # Rally Ruby REST API expects IDs as strings
@@ -82,30 +83,30 @@ module TaskMapper::Provider
         self.new query_result.first, project_id
       end
 
-      # Accepts a project id and attributes hash and returns all 
+      # Accepts a project id and attributes hash and returns all
       # tickets matching the project and those attributes in an array
       # Should return all project tickets if the attributes hash is empty
       def self.find_by_attributes(project_id, attributes = {})
         self.search(project_id, attributes)
-      end            
-      
+      end
+
       # This is a helper method to find
       def self.search(project_id, options = {}, limit = 1000)
         project = self.rally_project(project_id)
         search_type = options.delete(:type_as_symbol) || :artifact
         # Convert taskmapper hash keys to Rally hash keys for Rally query params
-        query_parameters = self.to_rally_query_parameters(options) 
-        query_result = TaskMapper::Provider::Rally.rally.find_all(search_type, :project => project){ 
+        query_parameters = self.to_rally_query_parameters(options)
+        query_result = TaskMapper::Provider::Rally.rally.find_all(search_type, :project => project){
           query_parameters.each do |key, value|
             equal key, value
           end
         }
-        tickets = query_result.collect do |ticket| 
+        tickets = query_result.collect do |ticket|
           self.new ticket, project_id
         end
         search_by_attribute(tickets, options, limit)
       end
-      
+
       def self.create(*options)
         options = options.shift
         project = self.rally_project(options[:project_id])
@@ -116,7 +117,7 @@ module TaskMapper::Provider
         new_ticket = TaskMapper::Provider::Rally.rally.create(new_type, ticket)
         self.new new_ticket
       end
-      
+
       def save
         if self[:oid].empty?
           @system_data[:client].save!
@@ -125,39 +126,40 @@ module TaskMapper::Provider
           ticket_updated = @system_data[:client].update(ticket)
         end
       end
-      
+
       def destroy
         @system_data[:client].delete
         #  client_issue.delete
       end
 
       private
-      
+
         def self.rally_project(project_id)
           taskmapper_project = provider_parent(self)::Project.find_by_id(project_id)
           taskmapper_project.system_data[:client]
         end
-        
+
         def self.to_rally_object(hash)
           ticket = {
             :name => hash[:title],
             :description => hash[:description],
-            :schedule_state => hash[:resolution] ||= "Defined", 
-            :state => hash[:status] ||= "Submitted"     
+            :schedule_state => hash[:resolution] ||= "Defined",
+            :state => hash[:status] ||= "Submitted"
           }
           # Rally optional attributes
           ticket[:submitted_by] = hash[:requestor] if hash[:requestor]
           ticket[:owner] = hash[:assignee] if hash[:assignee]
           ticket[:priority] = hash[:priority] if hash[:priority]
           ticket[:work_product] = hash[:work_product] if hash[:work_product]
-          ticket          
+          ticket[:plan_estimate] = hash[:estimate] if hash[:estimate]
+          ticket
         end
-        
+
         # Transform options hash into query parameters block
         def self.to_rally_query_parameters(hash)
           query_parameters = {}
-          query_parameters[:schedule_state] = hash[:resolution] ? hash[:resolution] : "Defined"    
-          query_parameters[:state] = hash[:status] ? hash[:status] : "Submitted"    
+          query_parameters[:schedule_state] = hash[:resolution] ? hash[:resolution] : "Defined"
+          query_parameters[:state] = hash[:status] ? hash[:status] : "Submitted"
           query_parameters[:object_i_d] = hash[:id].to_s if hash[:id]
           query_parameters[:name] = hash[:title] if hash[:title]
           query_parameters[:description] = hash[:description] if hash[:description]
@@ -167,7 +169,7 @@ module TaskMapper::Provider
           query_parameters[:work_product] = hash[:work_product] if hash[:work_product]
           query_parameters
         end
-        
+
     end
   end
 end
