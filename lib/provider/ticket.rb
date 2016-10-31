@@ -34,7 +34,8 @@ module TaskMapper::Provider
             :estimate => ticket.plan_estimate,
             :created_at => ticket.creation_date,
             :children => (ticket.children.present? ? ticket.children : []),
-            :updated_at => ticket.last_update_date
+            :updated_at => ticket.last_update_date,
+            :iteration_id => ticket.iteration.try(:oid)
           }
           # Rally optional attributes
           hash[:assignee] = ticket.owner if ticket.owner
