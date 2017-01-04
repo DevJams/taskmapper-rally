@@ -112,8 +112,10 @@ module TaskMapper::Provider
       def self.create(*options)
         options = options.shift
         project = self.rally_project(options[:project_id])
+        parent  = self.rally_ticket(options[:project_id], options[:parent])
         ticket = self.to_rally_object(options)
         ticket[:project] = project
+        ticket[:parent]  = parent unless parent.blank?
         # Not sure about making the defect the default here, thoughts?
         new_type = options[:type_as_symbol] || :defect
         new_ticket = TaskMapper::Provider::Rally.rally.create(new_type, ticket)
@@ -139,6 +141,12 @@ module TaskMapper::Provider
         def self.rally_project(project_id)
           taskmapper_project = provider_parent(self)::Project.find_by_id(project_id)
           taskmapper_project.system_data[:client]
+        end
+
+        def self.rally_ticket(project_id, ticket_id)
+          return if project_id.blank? || ticket_id.blank?
+          taskmapper_ticket = provider_parent(self)::Ticket.find_by_id(project_id, ticket_id)
+          taskmapper_ticket.system_data[:client]
         end
 
         def self.to_rally_object(hash)
