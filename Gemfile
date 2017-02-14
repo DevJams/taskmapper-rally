@@ -7,7 +7,6 @@ source "http://rubygems.org"
 # Include everything needed to run rake, tests, features, etc.
 
 gem "taskmapper"
-gem "rally_rest_api", "~> 1.0"
 
 group :development,:test do
   gem "rspec"
